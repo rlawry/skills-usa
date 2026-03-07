@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Animal Care Equipment Quiz (Local Images)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink:#14202a;
+      --card:rgba(255,255,255,.82);
+      --shadow:0 18px 60px rgba(0,0,0,.14);
+      --radius:26px;
+      --pill:rgba(255,255,255,.72);
+      --pillBorder:rgba(0,0,0,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; overflow:hidden; font-family:"Fredoka",system-ui;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 700px at 18% 20%, rgba(255,210,246,.92), transparent 62%),
+        radial-gradient(950px 650px at 86% 28%, rgba(195,241,255,.96), transparent 62%),
+        radial-gradient(900px 650px at 38% 92%, rgba(215,255,220,.92), transparent 60%),
+        linear-gradient(180deg,#dcf6ff 0%,#fff6d6 52%,#e9ffe8 100%);
+    }
+
+    /* Floating clouds */
+    .clouds{position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:0;}
+    .cloud{
+      position:absolute; top:10%;
+      width:240px; height:90px;
+      background:rgba(255,255,255,.72);
+      border-radius:999px;
+      filter: blur(.2px);
+      box-shadow: 0 14px 40px rgba(0,0,0,.08);
+      opacity:.8;
+      animation: drift linear infinite;
+    }
+    .cloud:before,.cloud:after{
+      content:"";
+      position:absolute;
+      background:rgba(255,255,255,.78);
+      border-radius:999px;
+    }
+    .cloud:before{width:110px;height:110px;left:30px;top:-55px}
+    .cloud:after{width:140px;height:140px;left:105px;top:-75px}
+    @keyframes drift {
+      from { transform: translateX(-320px); }
+      to   { transform: translateX(calc(100vw + 420px)); }
+    }
+
+    .wrap{position:relative; z-index:1; height:100%; display:grid; place-items:center; padding:24px;}
+    .card{
+      width:min(980px, 96vw);
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      border:1px solid rgba(255,255,255,.55);
+      backdrop-filter: blur(10px);
+      overflow:hidden;
+    }
+
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:16px 18px 10px;
+      user-select:none;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:10px;
+      padding:8px 12px;
+      background:var(--pill);
+      border:1px solid var(--pillBorder);
+      border-radius:999px;
+      font-size:14px;
+      box-shadow:0 10px 22px rgba(0,0,0,.07);
+      white-space:nowrap;
+    }
+    .pill b{font-weight:600}
+    .statusDot{width:10px;height:10px;border-radius:999px;background:#ffb300; box-shadow:0 0 0 4px rgba(255,179,0,.18)}
+    .statusDot.ok{background:#28c76f; box-shadow:0 0 0 4px rgba(40,199,111,.18)}
+    .statusDot.bad{background:#ff4d4f; box-shadow:0 0 0 4px rgba(255,77,79,.18)}
+
+    .main{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:18px;
+      padding:10px 18px 18px;
+      align-items:stretch;
+    }
+    @media (max-width: 920px){
+      body{overflow:auto}
+      .wrap{height:auto; min-height:100%}
+      .main{grid-template-columns:1fr}
+    }
+
+    .imgbox{
+      border-radius:22px;
+      background:rgba(255,255,255,.75);
+      border:1px solid rgba(0,0,0,.06);
+      box-shadow:0 12px 30px rgba(0,0,0,.08);
+      padding:14px;
+      display:grid;
+      place-items:center;
+      min-height:420px;
+    }
+    .imgbox img{
+      width:100%;
+      max-width:680px;
+      height:380px;
+      object-fit:contain;
+      border-radius:18px;
+      border:1px solid rgba(0,0,0,.06);
+      background:#fff;
+      box-shadow:0 10px 26px rgba(0,0,0,.08);
+    }
+
+    .opts{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .opt{
+      appearance:none;
+      border:1px solid rgba(0,0,0,.10);
+      background:rgba(255,255,255,.92);
+      border-radius:18px;
+      padding:14px 14px;
+      text-align:left;
+      font:600 18px/1.15 "Fredoka",system-ui;
+      color:var(--ink);
+      cursor:pointer;
+      box-shadow:0 10px 22px rgba(0,0,0,.08);
+      transition: transform .08s ease, filter .08s ease;
+    }
+    .opt:hover{transform: translateY(-1px); filter:brightness(1.02)}
+    .opt:active{transform: translateY(0px); filter:brightness(.99)}
+    .opt[disabled]{cursor:default; opacity:.65; transform:none}
+
+    .end{
+      display:none;
+      padding:22px 18px 22px;
+      text-align:center;
+    }
+    .end h1{
+      margin:0 0 10px;
+      font-size:clamp(28px,4vw,44px);
+    }
+    .end .big{
+      display:inline-block;
+      padding:10px 16px;
+      border-radius:999px;
+      border:1px solid rgba(0,0,0,.10);
+      background:rgba(255,255,255,.78);
+      box-shadow:0 12px 26px rgba(0,0,0,.10);
+      font-size:18px;
+      margin:8px 0;
+    }
+    .restart{
+      margin-top:16px;
+      appearance:none;
+      border:none;
+      background:rgba(255,255,255,.92);
+      border-radius:999px;
+      padding:12px 18px;
+      font:600 16px/1 "Fredoka",system-ui;
+      cursor:pointer;
+      box-shadow:0 12px 30px rgba(0,0,0,.12);
+    }
+
+    /* Emoji burst layer */
+    .burstLayer{position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:9999;}
+    .emoji{
+      position:absolute;
+      font-size:28px;
+      will-change: transform, opacity;
+      filter: drop-shadow(0 10px 10px rgba(0,0,0,.18));
+    }
+
+    .toast{
+      position:fixed; left:50%; bottom:16px;
+      transform:translateX(-50%);
+      background:rgba(0,0,0,.78);
+      color:#fff;
+      border-radius:999px;
+      padding:10px 14px;
+      font-size:13px;
+      opacity:0;
+      pointer-events:none;
+      transition:opacity .18s ease, transform .18s ease;
+    }
+    .toast.show{opacity:1; transform:translateX(-50%) translateY(-2px)}
+  </style>
+</head>
+<body>
+  <div class="clouds" aria-hidden="true">
+    <div class="cloud" style="top:10%; left:-320px; animation-duration: 62s; animation-delay:-10s;"></div>
+    <div class="cloud" style="top:22%; left:-420px; width:290px; height:105px; opacity:.74; animation-duration: 78s; animation-delay:-34s;"></div>
+    <div class="cloud" style="top:36%; left:-360px; width:220px; height:82px; opacity:.66; animation-duration: 70s; animation-delay:-25s;"></div>
+    <div class="cloud" style="top:58%; left:-520px; width:320px; height:110px; opacity:.70; animation-duration: 88s; animation-delay:-40s;"></div>
+    <div class="cloud" style="top:72%; left:-460px; width:260px; height:92px; opacity:.62; animation-duration: 74s; animation-delay:-18s;"></div>
+  </div>
+
+  <div class="burstLayer" id="burstLayer" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <div class="card">
+      <div class="topbar">
+        <div class="pill">
+          <span class="statusDot" id="dot"></span>
+          <span id="manifestLabel">image_manifest.json: loading…</span>
+        </div>
+        <div class="pill"><span>Remaining:</span> <b id="remain">—</b></div>
+        <div class="pill"><span>Questions:</span> <b id="asked">0</b></div>
+      </div>
+
+      <div class="main" id="main">
+        <div class="imgbox">
+          <img id="img" alt="quiz item image" />
+        </div>
+        <div class="opts" id="opts"></div>
+      </div>
+
+      <div class="end" id="end">
+        <h1>All done</h1>
+        <div class="big" id="summary1"></div><br/>
+        <div class="big" id="summary2"></div><br/>
+        <button class="restart" id="restart" type="button">Restart</button>
+      </div>
+    </div>
+  </div>
+<audio id="sndYes" preload="auto">
+    <source src="yes.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="sndNo" preload="auto">
+    <source src="no.mp3" type="audio/mpeg">
+  </audio>
+  <div class="toast" id="toast"></div>
+
+<script>
+(() => {
+  // Put these next to this HTML:
+  //   image_manifest.json
+  //   images/ (folder)
+  // Open via http://localhost/... (XAMPP). file:// blocks fetch().
+
+  const MANIFEST_URL = "image_manifest.json";
+
+  const MASTER = Object.freeze(["Ambu bag", "Hypodermic Needles", "Leur Lock Syringe", "Anesthetic Machines 1& 2", "Drench Gun", "Automatic Multi-Dose Syringe", "Animal Clippers", "Ear Notcher", "Slip Tip Syringe", "Autoclave", "Ear Tag Pliers", "Microscope", "Autoclave Tape Indicator", "Ear Tags", "Microscope Slides", "Backhaus Towel Clamp", "Elastrator", "Muzzle", "Balling Gun", "Elizabethan Collar", "Guillotine Nail Clippers", "Bandaging Mati-Elasticon", "Emasculators", "Plier Nail Clippers", "Elasticon", "Endotracheal Tube", "Mayor-Hegar Needle Holder", "Rolled Gauze", "Fecal Loop", "Olsen-Hegar Needle Holder", "Vet Wrap", "Fecalyzers", "Obstetrical Chain and Handle", "Bands (castration or docking)", "Feeding Tube", "Ophthalmoscope", "Basket Muzzle", "Small/Large Animal", "Otoscope", "Betadine", "Fetal Extractor", "Paste Gun", "Body Brush (soft bristle)", "Fingertip Toothbrush", "Pig Tooth Nippers", "Dandy Brush (stiff bristle)", "Alligator Forceps", "Pill Counting Tray", "Pin Brush", "Allis Tissue Forceps", "Radiology PPE", "Slicker Brush", "Adson-Brown-Thumb Forcep", "Rumen Magnet", "Wool Card", "Crile Forceps", "Scalpel Blade", "Bulb Syringe", "Halstead Mosquito Forceps", "Scalpel Handle", "Cat Bag", "Kelly Forceps", "Lister Bandage Scissors", "Catch pole (dog snare)", "Rat Tooth Thumb Forceps", "Shedding Blade", "Butterfly Catheter", "Adson Tissue Forceps", "Silver Nitrate Sticks", "IV Catheter", "Babcock Tissue Forceps", "Small Animal Oxygen Cage", "Urine Catheter", "Gag Mouth Speculum", "Snook Hook", "Centrifuge", "Squeeze Chute", "Chain Twitch", "Gavage Needle", "Staple Remover", "Chemical Indicator Strips", "Gravity Feeder- J Tube", "Steel Lift Table", "Clipper Blades", "Halter", "Stethoscope", "Clipper Comb", "Head Chute", "Surgical Cap", "Cold Sterile Tray", "Hog Snare", "Surgical Drape", "Curry Comb", "Hoof Knife", "Surgical Gown", "Flea Comb", "Hoof Pick", "Surgical Masks", "Scotch Comb", "Hoof Rasp", "Surgical Tray", "Cover Slips", "Hoof Trimmers", "Suture Material", "Barnes Dehorner", "Suture Needle", "Electric Dehorner", "Hydraulic Chute", "Tattooing Instrument", "Scoop or Tube Dehorner", "IV Administration", "IV Fluids", "Tourniquet", "Dental Floats", "Laryngoscopes", "Trocar & Cannula", "Dental Retractor", "Lead Rope", "Weight Tape", "Dental Scaler"]);
+  const TOTAL = MASTER.length;
+
+  const el = {
+    dot: document.getElementById("dot"),
+    manifestLabel: document.getElementById("manifestLabel"),
+    remain: document.getElementById("remain"),
+    asked: document.getElementById("asked"),
+    img: document.getElementById("img"),
+    opts: document.getElementById("opts"),
+    main: document.getElementById("main"),
+    end: document.getElementById("end"),
+    summary1: document.getElementById("summary1"),
+    summary2: document.getElementById("summary2"),
+    restart: document.getElementById("restart"),
+    burstLayer: document.getElementById("burstLayer"),
+    toast: document.getElementById("toast"),
+    sndYes: document.getElementById("sndYes"),
+    sndNo: document.getElementById("sndNo"),
+  };
+
+  let manifest = null; // expected: manifest.images[item].file -> "images/.."
+  let remaining = new Set(MASTER);
+  let asked = 0;
+  let current = null;
+  let locked = false;
+
+  function toast(msg) {
+    el.toast.textContent = msg;
+    el.toast.classList.add("show");
+    setTimeout(() => el.toast.classList.remove("show"), 900);
+  }
+
+  // Resolve and probe sound URLs once at startup.
+  const SOUND = { yesUrl: null, noUrl: null, ready: false };
+
+  async function probeUrl(url) {
+    // Try to fetch 1 byte so we don't download the whole file just to test existence.
+    // Some servers don't support Range; fall back to normal fetch.
+    try {
+      let r = await fetch(url, { method: "GET", headers: { "Range": "bytes=0-0" }, cache: "no-store" });
+      if (r.ok) return true;
+      r = await fetch(url, { cache: "no-store" });
+      return r.ok;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  async function initSoundUrls() {
+    if (SOUND.ready) return;
+    const base = new URL(".", window.location.href).href;
+
+    const yesCandidates = [
+      new URL("yes.mp3", base).href,               // same folder as HTML
+      new URL("/yes.mp3", window.location.origin).href, // site root
+    ];
+    const noCandidates = [
+      new URL("no.mp3", base).href,
+      new URL("/no.mp3", window.location.origin).href,
+    ];
+
+    for (const u of yesCandidates) {
+      if (await probeUrl(u)) { SOUND.yesUrl = u; break; }
+    }
+    for (const u of noCandidates) {
+      if (await probeUrl(u)) { SOUND.noUrl = u; break; }
+    }
+
+    SOUND.ready = true;
+
+    if (!SOUND.yesUrl || !SOUND.noUrl) {
+      // Don't spam; just one toast.
+      toast("Sound files not found (check yes.mp3/no.mp3 location)");
+      console.warn("Sound URL resolution:", SOUND, { yesCandidates, noCandidates });
+    }
+  }
+
+  function playSoundUrl(url) {
+    // Fire-and-forget playback that won't get cut off when the UI updates.
+    // Use a fresh Audio instance each time so rapid answers don't interrupt previous sound.
+    try {
+      if (!url) return;
+
+      if (!window.__activeSounds) window.__activeSounds = [];
+      const a = new Audio(url);
+      a.preload = "auto";
+      a.volume = 1.0;
+
+      const cleanup = () => {
+        const arr = window.__activeSounds;
+        const idx = arr ? arr.indexOf(a) : -1;
+        if (idx >= 0) arr.splice(idx, 1);
+      };
+
+      a.addEventListener("ended", cleanup, { once: true });
+      a.addEventListener("error", cleanup, { once: true });
+
+      window.__activeSounds.push(a);
+
+      const p = a.play();
+      if (p && typeof p.catch === "function") {
+        p.catch((err) => {
+          cleanup();
+          console.warn("Audio play blocked/rejected:", err);
+          // Most common reason: browser blocked playback because it didn't consider this a gesture.
+          // We won't toast every time; only once.
+          if (!window.__soundWarned) {
+            window.__soundWarned = true;
+            toast("Sound blocked by browser policy");
+          }
+        });
+      }
+    } catch (e) {
+      console.warn("Audio play exception:", e);
+    }
+  }
+
+  function playSound(aud) {
+    // Back-compat wrapper: choose yes/no by element id
+    const id = aud && aud.id ? aud.id : "";
+    if (id === "sndYes") playSoundUrl(SOUND.yesUrl);
+    else if (id === "sndNo") playSoundUrl(SOUND.noUrl);
+  }
+
+  function placeholderSvg(label) {
+    const safe = String(label).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    const svg = `
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0" stop-color="hsl(190 95% 92%)"/><stop offset="1" stop-color="hsl(95 85% 92%)"/>
+  </linearGradient></defs>
+  <rect width="900" height="600" rx="34" fill="url(#g)"/>
+  <text x="450" y="290" text-anchor="middle" font-family="Fredoka, system-ui" font-size="56" fill="rgba(0,0,0,.38)">No image</text>
+  <text x="450" y="362" text-anchor="middle" font-family="Fredoka, system-ui" font-size="22" fill="rgba(0,0,0,.45)">${safe}</text>
+</svg>`;
+    return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+  }
+
+  function randInt(n) { return Math.floor(Math.random() * n); }
+
+  function pickRandomFromSet(s) {
+    const idx = randInt(s.size);
+    let i = 0;
+    for (const v of s) {
+      if (i === idx) return v;
+      i++;
+    }
+    return null;
+  }
+
+  function shuffle(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  function buildOptions(correct, count=6) {
+    const opts = new Set([correct]);
+    while (opts.size < count) {
+      opts.add(MASTER[randInt(MASTER.length)]);
+    }
+    return shuffle([...opts]);
+  }
+
+  function getImagePath(item) {
+    const p = manifest?.images?.[item]?.file;
+    return (typeof p === "string" && p.trim()) ? p : null;
+  }
+
+  function setImage(item) {
+    const p = getImagePath(item);
+    if (!p) {
+      el.img.onerror = null;
+      el.img.src = placeholderSvg(item);
+      return;
+    }
+    el.img.onerror = () => {
+      el.img.onerror = null;
+      el.img.src = placeholderSvg(item);
+      toast("image missing");
+    };
+    el.img.src = p;
+  }
+
+  function emojiBurst(kind) {
+    const happy = ["😺","😸","😻","😹","🐱","✨","🌸"];
+    const sad   = ["😿","🙀","😾","🐱‍👤","💥","💧"];
+    const pool = (kind === "happy") ? happy : sad;
+
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+
+    // burst around the quiz card area (roughly centered)
+    const centerX = w * (0.50 + (Math.random()*0.08 - 0.04));
+    const centerY = h * (0.48 + (Math.random()*0.08 - 0.04));
+
+    const N = 26;
+    const t0 = performance.now();
+
+    for (let i = 0; i < N; i++) {
+      const e = document.createElement("div");
+      e.className = "emoji";
+      e.textContent = pool[randInt(pool.length)];
+
+      const angle = Math.random() * Math.PI * 2;
+
+      // Use pixels/second (NOT pixels/ms)
+      const speed = 180 + Math.random() * 260;   // px/s
+      const vx = Math.cos(angle) * speed;
+      const vy = Math.sin(angle) * speed - (220 + Math.random() * 220); // initial upward kick
+
+      const x0 = centerX + (Math.random() * 36 - 18);
+      const y0 = centerY + (Math.random() * 28 - 14);
+
+      e.style.left = x0 + "px";
+      e.style.top  = y0 + "px";
+      el.burstLayer.appendChild(e);
+
+      const life = 1.25 + Math.random() * 0.55;  // seconds
+      const rot0 = Math.random() * 80 - 40;
+      const rotv = Math.random() * 260 - 130;
+
+      function tick(t) {
+        const dt = (t - t0) / 1000; // seconds since burst start
+        const p = dt / life;
+        if (p >= 1) { e.remove(); return; }
+
+        const g = 520; // px/s^2 (gravity)
+        const x = x0 + vx * dt;
+        const y = y0 + vy * dt + 0.5 * g * dt * dt;
+
+        const rot = rot0 + rotv * p;
+
+        // slight ease-out and fade
+        const scale = 1 - p * 0.22;
+        e.style.transform = `translate(${x - x0}px, ${y - y0}px) rotate(${rot}deg) scale(${scale})`;
+        e.style.opacity = String(1 - p);
+
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+  }
+
+  function renderQuestion() {
+    el.remain.textContent = String(remaining.size);
+    el.asked.textContent = String(asked);
+
+    if (remaining.size === 0) {
+      el.main.style.display = "none";
+      el.end.style.display = "block";
+      const variance = asked - TOTAL;
+      const sign = (variance >= 0) ? "+" : "";
+      const efficiency = TOTAL > 0 ? (TOTAL / Math.max(1, asked)) : 0;
+      el.summary1.textContent = `Total items: ${TOTAL}  •  Questions asked: ${asked}`;
+      el.summary2.textContent = `Variance: ${sign}${variance}  •  Efficiency: ${Math.round(efficiency*100)}%`;
+      return;
+    }
+
+    current = pickRandomFromSet(remaining);
+    setImage(current);
+
+    const options = buildOptions(current, 6);
+    el.opts.innerHTML = "";
+    for (const label of options) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "opt";
+      btn.textContent = label;
+      btn.addEventListener("click", () => onAnswer(label));
+      el.opts.appendChild(btn);
+    }
+  }
+
+  function lockButtons(disabled=true) {
+    for (const b of el.opts.querySelectorAll("button")) b.disabled = disabled;
+  }
+
+  function onAnswer(choice) {
+    if (locked) return;
+    locked = true;
+    lockButtons(true);
+    asked++;
+
+    if (choice === current) {
+      playSound(el.sndYes);
+      remaining.delete(current);
+      emojiBurst("happy");
+    } else {
+      playSound(el.sndNo);
+      emojiBurst("sad");
+    }
+
+    setTimeout(() => {
+      locked = false;
+      renderQuestion();
+    }, 650);
+  }
+
+  async function loadManifest() {
+    try {
+      const r = await fetch(MANIFEST_URL, { cache: "no-store" });
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      manifest = await r.json();
+
+      el.dot.classList.add("ok");
+      el.manifestLabel.textContent = "image_manifest.json: OK";
+    } catch (e) {
+      manifest = null;
+      el.dot.classList.add("bad");
+      el.manifestLabel.textContent = "image_manifest.json: FAILED (open via http://localhost/)";
+      toast("manifest load failed");
+    }
+
+    initSoundUrls();
+    renderQuestion();
+  }
+
+  el.restart.addEventListener("click", () => {
+    remaining = new Set(MASTER);
+    asked = 0;
+    locked = false;
+    el.end.style.display = "none";
+    el.main.style.display = "";
+    initSoundUrls();
+    renderQuestion();
+  });
+
+  initSoundUrls();
+  loadManifest();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1285 @@
+{
+  "generated_at": "2026-03-07T17:21:19.898Z",
+  "images": {
+    "Ambu bag": {
+      "file": "images/ambu_bag.webp",
+      "filename": "ambu_bag.webp",
+      "name": "Ambu bag",
+      "description": "manual resuscitator bag-valve-mask for ventilating an animal patient",
+      "query": "Ambu bag bag valve mask BVM manual resuscitator manual resuscitator bag-valve-mask for ventilating an animal patient veterinary instrument photo",
+      "synonyms": [
+        "bag valve mask",
+        "BVM",
+        "manual resuscitator"
+      ]
+    },
+    "Hypodermic Needles": {
+      "file": "images/hypodermic_needles.webp",
+      "filename": "hypodermic_needles.webp",
+      "name": "Hypodermic Needles",
+      "description": "sterile hypodermic needles for injections",
+      "query": "Hypodermic Needles injection needle hypodermic needle sterile hypodermic needles for injections veterinary instrument photo",
+      "synonyms": [
+        "injection needle",
+        "hypodermic needle"
+      ]
+    },
+    "Leur Lock Syringe": {
+      "file": "images/leur_lock_syringe.webp",
+      "filename": "leur_lock_syringe.webp",
+      "name": "Leur Lock Syringe",
+      "description": "luer-lock syringe used for injections and drawing up medication",
+      "query": "Leur Lock Syringe luer lock syringe locking syringe luer lock luer-lock syringe used for injections and drawing up medication veterinary instrument photo",
+      "synonyms": [
+        "luer lock syringe",
+        "locking syringe",
+        "luer lock"
+      ]
+    },
+    "Anesthetic Machines 1& 2": {
+      "file": "images/anesthetic_machines_1_and_2.webp",
+      "filename": "anesthetic_machines_1_and_2.webp",
+      "name": "Anesthetic Machines 1& 2",
+      "description": "veterinary anesthesia machine for delivering inhalant anesthetic gas",
+      "query": "Anesthetic Machines 1& 2 anesthesia machine inhalant anesthesia veterinary anesthesia machine for delivering inhalant anesthetic gas veterinary instrument photo",
+      "synonyms": [
+        "anesthesia machine",
+        "inhalant anesthesia"
+      ]
+    },
+    "Drench Gun": {
+      "file": "images/drench_gun.webp",
+      "filename": "drench_gun.webp",
+      "name": "Drench Gun",
+      "description": "oral drench gun for dosing livestock with liquid medication",
+      "query": "Drench Gun oral drench gun livestock drench oral drench gun for dosing livestock with liquid medication veterinary instrument photo",
+      "synonyms": [
+        "oral drench gun",
+        "livestock drench"
+      ]
+    },
+    "Automatic Multi-Dose Syringe": {
+      "file": "images/automatic_multi_dose_syringe.webp",
+      "filename": "automatic_multi_dose_syringe.webp",
+      "name": "Automatic Multi-Dose Syringe",
+      "description": "automatic multi-dose livestock syringe for repeated injections",
+      "query": "Automatic Multi-Dose Syringe multi dose syringe automatic syringe automatic multi-dose livestock syringe for repeated injections veterinary instrument photo",
+      "synonyms": [
+        "multi dose syringe",
+        "automatic syringe"
+      ]
+    },
+    "Animal Clippers": {
+      "file": "images/animal_clippers.webp",
+      "filename": "animal_clippers.webp",
+      "name": "Animal Clippers",
+      "description": "electric animal grooming clippers for shaving hair",
+      "query": "Animal Clippers grooming clippers animal hair clippers electric animal grooming clippers for shaving hair veterinary instrument photo",
+      "synonyms": [
+        "grooming clippers",
+        "animal hair clippers"
+      ]
+    },
+    "Ear Notcher": {
+      "file": "images/ear_notcher.webp",
+      "filename": "ear_notcher.webp",
+      "name": "Ear Notcher",
+      "description": "ear notcher tool used for livestock identification notches",
+      "query": "Ear Notcher ear notch tool livestock ear notcher ear notcher tool used for livestock identification notches veterinary instrument photo",
+      "synonyms": [
+        "ear notch tool",
+        "livestock ear notcher"
+      ]
+    },
+    "Slip Tip Syringe": {
+      "file": "images/slip_tip_syringe.webp",
+      "filename": "slip_tip_syringe.webp",
+      "name": "Slip Tip Syringe",
+      "description": "slip-tip syringe (luer slip) used for irrigation or dosing",
+      "query": "Slip Tip Syringe luer slip syringe slip tip syringe slip-tip syringe (luer slip) used for irrigation or dosing veterinary instrument photo",
+      "synonyms": [
+        "luer slip syringe",
+        "slip tip syringe"
+      ]
+    },
+    "Autoclave": {
+      "file": "images/autoclave.webp",
+      "filename": "autoclave.webp",
+      "name": "Autoclave",
+      "description": "steam autoclave sterilizer for surgical instruments",
+      "query": "Autoclave steam sterilizer autoclave sterilizer steam autoclave sterilizer for surgical instruments veterinary instrument photo",
+      "synonyms": [
+        "steam sterilizer",
+        "autoclave sterilizer"
+      ]
+    },
+    "Ear Tag Pliers": {
+      "file": "images/ear_tag_pliers.webp",
+      "filename": "ear_tag_pliers.webp",
+      "name": "Ear Tag Pliers",
+      "description": "ear tag applicator pliers for applying livestock ear tags",
+      "query": "Ear Tag Pliers ear tag applicator ear tag pliers ear tag applicator pliers for applying livestock ear tags veterinary instrument photo",
+      "synonyms": [
+        "ear tag applicator",
+        "ear tag pliers"
+      ]
+    },
+    "Microscope": {
+      "file": "images/microscope.webp",
+      "filename": "microscope.webp",
+      "name": "Microscope",
+      "description": "microscope used to view specimens (fecal, skin, blood smears)",
+      "query": "Microscope microscope microscope used to view specimens (fecal, skin, blood smears) veterinary instrument photo",
+      "synonyms": [
+        "microscope"
+      ]
+    },
+    "Autoclave Tape Indicator": {
+      "file": "images/autoclave_tape_indicator.webp",
+      "filename": "autoclave_tape_indicator.webp",
+      "name": "Autoclave Tape Indicator",
+      "description": "autoclave indicator tape that changes color after sterilization",
+      "query": "Autoclave Tape Indicator sterilization indicator tape autoclave tape autoclave indicator tape that changes color after sterilization veterinary instrument photo",
+      "synonyms": [
+        "sterilization indicator tape",
+        "autoclave tape"
+      ]
+    },
+    "Ear Tags": {
+      "file": "images/ear_tags.webp",
+      "filename": "ear_tags.webp",
+      "name": "Ear Tags",
+      "description": "livestock ear tags used for identification",
+      "query": "Ear Tags ear tags livestock ear tags used for identification veterinary instrument photo",
+      "synonyms": [
+        "ear tags"
+      ]
+    },
+    "Microscope Slides": {
+      "file": "images/microscope_slides.webp",
+      "filename": "microscope_slides.webp",
+      "name": "Microscope Slides",
+      "description": "microscope slides used to mount specimens",
+      "query": "Microscope Slides microscope slide glass slide microscope slides used to mount specimens veterinary instrument photo",
+      "synonyms": [
+        "microscope slide",
+        "glass slide"
+      ]
+    },
+    "Backhaus Towel Clamp": {
+      "file": "images/backhaus_towel_clamp.webp",
+      "filename": "backhaus_towel_clamp.webp",
+      "name": "Backhaus Towel Clamp",
+      "description": "Backhaus towel clamp used to secure surgical drapes",
+      "query": "Backhaus Towel Clamp towel clamp Backhaus clamp Backhaus towel clamp used to secure surgical drapes veterinary instrument photo",
+      "synonyms": [
+        "towel clamp",
+        "Backhaus clamp"
+      ]
+    },
+    "Elastrator": {
+      "file": "images/elastrator.webp",
+      "filename": "elastrator.webp",
+      "name": "Elastrator",
+      "description": "elastrator tool used to apply rubber bands for castration/docking",
+      "query": "Elastrator bander tool elastrator elastrator tool used to apply rubber bands for castration/docking veterinary instrument photo",
+      "synonyms": [
+        "bander tool",
+        "elastrator"
+      ]
+    },
+    "Muzzle": {
+      "file": "images/muzzle.webp",
+      "filename": "muzzle.webp",
+      "name": "Muzzle",
+      "description": "animal muzzle used to prevent biting during handling",
+      "query": "Muzzle muzzle basket muzzle animal muzzle used to prevent biting during handling veterinary instrument photo",
+      "synonyms": [
+        "muzzle",
+        "basket muzzle"
+      ]
+    },
+    "Balling Gun": {
+      "file": "images/balling_gun.webp",
+      "filename": "balling_gun.webp",
+      "name": "Balling Gun",
+      "description": "balling gun for administering boluses/pills to livestock",
+      "query": "Balling Gun bolus gun cattle balling gun balling gun for administering boluses/pills to livestock veterinary instrument photo",
+      "synonyms": [
+        "bolus gun",
+        "cattle balling gun"
+      ]
+    },
+    "Elizabethan Collar": {
+      "file": "images/elizabethan_collar.webp",
+      "filename": "elizabethan_collar.webp",
+      "name": "Elizabethan Collar",
+      "description": "Elizabethan collar (E-collar) to prevent licking/chewing wounds",
+      "query": "Elizabethan Collar E-collar Elizabethan collar Elizabethan collar (E-collar) to prevent licking/chewing wounds veterinary instrument photo",
+      "synonyms": [
+        "E-collar",
+        "Elizabethan collar"
+      ]
+    },
+    "Guillotine Nail Clippers": {
+      "file": "images/guillotine_nail_clippers.webp",
+      "filename": "guillotine_nail_clippers.webp",
+      "name": "Guillotine Nail Clippers",
+      "description": "animal grooming clipper accessory",
+      "query": "Guillotine Nail Clippers clippers guillotine nail trimmer animal grooming clipper accessory veterinary instrument photo",
+      "synonyms": [
+        "clippers",
+        "guillotine nail trimmer"
+      ]
+    },
+    "Bandaging Mati-Elasticon": {
+      "file": "images/bandaging_mati_elasticon.webp",
+      "filename": "bandaging_mati_elasticon.webp",
+      "name": "Bandaging Mati-Elasticon",
+      "description": "bandaging material: Elastikon elastic adhesive tape",
+      "query": "Bandaging Mati-Elasticon Elastikon elastic adhesive bandage bandaging material: Elastikon elastic adhesive tape veterinary instrument photo",
+      "synonyms": [
+        "Elastikon",
+        "elastic adhesive bandage"
+      ]
+    },
+    "Emasculators": {
+      "file": "images/emasculators.webp",
+      "filename": "emasculators.webp",
+      "name": "Emasculators",
+      "description": "emasculators used in large-animal castration to crush and cut",
+      "query": "Emasculators emasculator emasculators used in large-animal castration to crush and cut veterinary instrument photo",
+      "synonyms": [
+        "emasculator"
+      ]
+    },
+    "Plier Nail Clippers": {
+      "file": "images/plier_nail_clippers.webp",
+      "filename": "plier_nail_clippers.webp",
+      "name": "Plier Nail Clippers",
+      "description": "animal grooming clipper accessory",
+      "query": "Plier Nail Clippers clippers scissor nail trimmer animal grooming clipper accessory veterinary instrument photo",
+      "synonyms": [
+        "clippers",
+        "scissor nail trimmer"
+      ]
+    },
+    "Elasticon": {
+      "file": "images/elasticon.webp",
+      "filename": "elasticon.webp",
+      "name": "Elasticon",
+      "description": "Elastikon elastic adhesive bandage tape",
+      "query": "Elasticon Elastikon elastic adhesive tape Elastikon elastic adhesive bandage tape veterinary instrument photo",
+      "synonyms": [
+        "Elastikon",
+        "elastic adhesive tape"
+      ]
+    },
+    "Endotracheal Tube": {
+      "file": "images/endotracheal_tube.webp",
+      "filename": "endotracheal_tube.webp",
+      "name": "Endotracheal Tube",
+      "description": "endotracheal tube for airway management during anesthesia",
+      "query": "Endotracheal Tube ET tube endotracheal tube endotracheal tube for airway management during anesthesia veterinary instrument photo",
+      "synonyms": [
+        "ET tube",
+        "endotracheal tube"
+      ]
+    },
+    "Mayor-Hegar Needle Holder": {
+      "file": "images/mayor_hegar_needle_holder.webp",
+      "filename": "mayor_hegar_needle_holder.webp",
+      "name": "Mayor-Hegar Needle Holder",
+      "description": "needle used for injections or sampling",
+      "query": "Mayor-Hegar Needle Holder needle hypodermic needle mayo-hegar needle holder mayo hegar needle holder needle used for injections or sampling veterinary instrument photo",
+      "synonyms": [
+        "needle",
+        "hypodermic needle",
+        "mayo-hegar needle holder",
+        "mayo hegar needle holder"
+      ]
+    },
+    "Rolled Gauze": {
+      "file": "images/rolled_gauze.webp",
+      "filename": "rolled_gauze.webp",
+      "name": "Rolled Gauze",
+      "description": "rolled gauze bandage for dressing wounds",
+      "query": "Rolled Gauze gauze roll rolled gauze rolled gauze bandage for dressing wounds veterinary instrument photo",
+      "synonyms": [
+        "gauze roll",
+        "rolled gauze"
+      ]
+    },
+    "Fecal Loop": {
+      "file": "images/fecal_loop.webp",
+      "filename": "fecal_loop.webp",
+      "name": "Fecal Loop",
+      "description": "fecal loop for obtaining rectal fecal sample",
+      "query": "Fecal Loop fecal loop sampler fecal loop for obtaining rectal fecal sample veterinary instrument photo",
+      "synonyms": [
+        "fecal loop sampler"
+      ]
+    },
+    "Olsen-Hegar Needle Holder": {
+      "file": "images/olsen_hegar_needle_holder.webp",
+      "filename": "olsen_hegar_needle_holder.webp",
+      "name": "Olsen-Hegar Needle Holder",
+      "description": "needle used for injections or sampling",
+      "query": "Olsen-Hegar Needle Holder needle hypodermic needle needle used for injections or sampling veterinary instrument photo",
+      "synonyms": [
+        "needle",
+        "hypodermic needle"
+      ]
+    },
+    "Vet Wrap": {
+      "file": "images/vet_wrap.webp",
+      "filename": "vet_wrap.webp",
+      "name": "Vet Wrap",
+      "description": "self-adherent cohesive wrap bandage",
+      "query": "Vet Wrap cohesive bandage self-adherent wrap vet wrap self-adherent cohesive wrap bandage veterinary instrument photo",
+      "synonyms": [
+        "cohesive bandage",
+        "self-adherent wrap",
+        "vet wrap"
+      ]
+    },
+    "Fecalyzers": {
+      "file": "images/fecalyzers.webp",
+      "filename": "fecalyzers.webp",
+      "name": "Fecalyzers",
+      "description": "fecal flotation system container for parasite testing",
+      "query": "Fecalyzers fecalyzer fecal flotation kit fecal flotation system container for parasite testing veterinary instrument photo",
+      "synonyms": [
+        "fecalyzer",
+        "fecal flotation kit"
+      ]
+    },
+    "Obstetrical Chain and Handle": {
+      "file": "images/obstetrical_chain_and_handle.webp",
+      "filename": "obstetrical_chain_and_handle.webp",
+      "name": "Obstetrical Chain and Handle",
+      "description": "obstetrical chain and handle for assisting livestock delivery",
+      "query": "Obstetrical Chain and Handle OB chain obstetrical chain obstetrical chain and handle for assisting livestock delivery veterinary instrument photo",
+      "synonyms": [
+        "OB chain",
+        "obstetrical chain"
+      ]
+    },
+    "Bands (castration or docking)": {
+      "file": "images/bands_castration_or_docking.webp",
+      "filename": "bands_castration_or_docking.webp",
+      "name": "Bands (castration or docking)",
+      "description": "rubber elastrator bands for castration or tail docking",
+      "query": "Bands (castration or docking) elastrator bands castration bands rubber elastrator bands for castration or tail docking veterinary instrument photo",
+      "synonyms": [
+        "elastrator bands",
+        "castration bands"
+      ]
+    },
+    "Feeding Tube": {
+      "file": "images/feeding_tube.webp",
+      "filename": "feeding_tube.webp",
+      "name": "Feeding Tube",
+      "description": "feeding tube used for gavage/oral feeding",
+      "query": "Feeding Tube feeding tube gavage tube feeding tube used for gavage/oral feeding veterinary instrument photo",
+      "synonyms": [
+        "feeding tube",
+        "gavage tube"
+      ]
+    },
+    "Ophthalmoscope": {
+      "file": "images/ophthalmoscope.webp",
+      "filename": "ophthalmoscope.webp",
+      "name": "Ophthalmoscope",
+      "description": "ophthalmoscope for examining the eye and retina",
+      "query": "Ophthalmoscope eye scope ophthalmoscope ophthalmoscope for examining the eye and retina veterinary instrument photo",
+      "synonyms": [
+        "eye scope",
+        "ophthalmoscope"
+      ]
+    },
+    "Basket Muzzle": {
+      "file": "images/basket_muzzle.webp",
+      "filename": "basket_muzzle.webp",
+      "name": "Basket Muzzle",
+      "description": "animal muzzle used to prevent biting during handling",
+      "query": "Basket Muzzle muzzle basket muzzle animal muzzle used to prevent biting during handling veterinary instrument photo",
+      "synonyms": [
+        "muzzle",
+        "basket muzzle"
+      ]
+    },
+    "Small/Large Animal": {
+      "file": "images/small_large_animal.webp",
+      "filename": "small_large_animal.webp",
+      "name": "Small/Large Animal",
+      "description": "scale or equipment sized for small and large animals (category label)",
+      "query": "Small/Large Animal small animal large animal scale or equipment sized for small and large animals (category label) veterinary instrument photo",
+      "synonyms": [
+        "small animal",
+        "large animal"
+      ]
+    },
+    "Otoscope": {
+      "file": "images/otoscope.webp",
+      "filename": "otoscope.webp",
+      "name": "Otoscope",
+      "description": "otoscope for examining ear canal",
+      "query": "Otoscope ear scope otoscope otoscope for examining ear canal veterinary instrument photo",
+      "synonyms": [
+        "ear scope",
+        "otoscope"
+      ]
+    },
+    "Betadine": {
+      "file": "images/betadine.webp",
+      "filename": "betadine.webp",
+      "name": "Betadine",
+      "description": "povidone-iodine antiseptic solution for skin preparation",
+      "query": "Betadine povidone iodine Betadine povidone-iodine antiseptic solution for skin preparation veterinary instrument photo",
+      "synonyms": [
+        "povidone iodine",
+        "Betadine"
+      ]
+    },
+    "Fetal Extractor": {
+      "file": "images/fetal_extractor.webp",
+      "filename": "fetal_extractor.webp",
+      "name": "Fetal Extractor",
+      "description": "obstetrical tool used to assist during livestock birth",
+      "query": "Fetal Extractor obstetrical tool obstetrical tool used to assist during livestock birth veterinary instrument photo",
+      "synonyms": [
+        "obstetrical tool"
+      ]
+    },
+    "Paste Gun": {
+      "file": "images/paste_gun.webp",
+      "filename": "paste_gun.webp",
+      "name": "Paste Gun",
+      "description": "paste gun for dosing dewormer paste to horses/livestock",
+      "query": "Paste Gun dewormer paste gun oral dosing gun paste gun for dosing dewormer paste to horses/livestock veterinary instrument photo",
+      "synonyms": [
+        "dewormer paste gun",
+        "oral dosing gun"
+      ]
+    },
+    "Body Brush (soft bristle)": {
+      "file": "images/body_brush_soft_bristle.webp",
+      "filename": "body_brush_soft_bristle.webp",
+      "name": "Body Brush (soft bristle)",
+      "description": "soft body brush for grooming horses/livestock",
+      "query": "Body Brush (soft bristle) body brush soft body brush for grooming horses/livestock veterinary instrument photo",
+      "synonyms": [
+        "body brush"
+      ]
+    },
+    "Fingertip Toothbrush": {
+      "file": "images/fingertip_toothbrush.webp",
+      "filename": "fingertip_toothbrush.webp",
+      "name": "Fingertip Toothbrush",
+      "description": "grooming brush/comb used for animal coat care",
+      "query": "Fingertip Toothbrush grooming brush grooming comb grooming brush/comb used for animal coat care veterinary instrument photo",
+      "synonyms": [
+        "grooming brush",
+        "grooming comb"
+      ]
+    },
+    "Pig Tooth Nippers": {
+      "file": "images/pig_tooth_nippers.webp",
+      "filename": "pig_tooth_nippers.webp",
+      "name": "Pig Tooth Nippers",
+      "description": "veterinary equipment or instrument used in animal care",
+      "query": "Pig Tooth Nippers veterinary tool veterinary equipment or instrument used in animal care veterinary instrument photo",
+      "synonyms": [
+        "veterinary tool"
+      ]
+    },
+    "Dandy Brush (stiff bristle)": {
+      "file": "images/dandy_brush_stiff_bristle.webp",
+      "filename": "dandy_brush_stiff_bristle.webp",
+      "name": "Dandy Brush (stiff bristle)",
+      "description": "stiff dandy brush for grooming horses",
+      "query": "Dandy Brush (stiff bristle) dandy brush stiff dandy brush for grooming horses veterinary instrument photo",
+      "synonyms": [
+        "dandy brush"
+      ]
+    },
+    "Alligator Forceps": {
+      "file": "images/alligator_forceps.webp",
+      "filename": "alligator_forceps.webp",
+      "name": "Alligator Forceps",
+      "description": "alligator forceps for grasping small objects in cavities",
+      "query": "Alligator Forceps alligator forceps alligator forceps for grasping small objects in cavities veterinary instrument photo",
+      "synonyms": [
+        "alligator forceps"
+      ]
+    },
+    "Pill Counting Tray": {
+      "file": "images/pill_counting_tray.webp",
+      "filename": "pill_counting_tray.webp",
+      "name": "Pill Counting Tray",
+      "description": "veterinary equipment or instrument used in animal care",
+      "query": "Pill Counting Tray veterinary tool veterinary equipment or instrument used in animal care veterinary instrument photo",
+      "synonyms": [
+        "veterinary tool"
+      ]
+    },
+    "Pin Brush": {
+      "file": "images/pin_brush.webp",
+      "filename": "pin_brush.webp",
+      "name": "Pin Brush",
+      "description": "pin brush for grooming long coats",
+      "query": "Pin Brush pin brush pin brush for grooming long coats veterinary instrument photo",
+      "synonyms": [
+        "pin brush"
+      ]
+    },
+    "Allis Tissue Forceps": {
+      "file": "images/allis_tissue_forceps.webp",
+      "filename": "allis_tissue_forceps.webp",
+      "name": "Allis Tissue Forceps",
+      "description": "Allis tissue forceps for grasping tissue",
+      "query": "Allis Tissue Forceps Allis forceps Allis tissue forceps for grasping tissue veterinary instrument photo",
+      "synonyms": [
+        "Allis forceps"
+      ]
+    },
+    "Radiology PPE": {
+      "file": "images/radiology_ppe.webp",
+      "filename": "radiology_ppe.webp",
+      "name": "Radiology PPE",
+      "description": "radiology personal protective equipment: lead apron, gloves, thyroid shield",
+      "query": "Radiology PPE lead apron x-ray PPE radiology personal protective equipment: lead apron, gloves, thyroid shield veterinary instrument photo",
+      "synonyms": [
+        "lead apron",
+        "x-ray PPE"
+      ]
+    },
+    "Slicker Brush": {
+      "file": "images/slicker_brush.webp",
+      "filename": "slicker_brush.webp",
+      "name": "Slicker Brush",
+      "description": "slicker brush for removing tangles and undercoat",
+      "query": "Slicker Brush slicker brush slicker brush for removing tangles and undercoat veterinary instrument photo",
+      "synonyms": [
+        "slicker brush"
+      ]
+    },
+    "Adson-Brown-Thumb Forcep": {
+      "file": "images/adson_brown_thumb_forcep.webp",
+      "filename": "adson_brown_thumb_forcep.webp",
+      "name": "Adson-Brown-Thumb Forcep",
+      "description": "veterinary equipment or instrument used in animal care",
+      "query": "Adson-Brown-Thumb Forcep veterinary tool veterinary equipment or instrument used in animal care veterinary instrument photo",
+      "synonyms": [
+        "veterinary tool"
+      ]
+    },
+    "Rumen Magnet": {
+      "file": "images/rumen_magnet.webp",
+      "filename": "rumen_magnet.webp",
+      "name": "Rumen Magnet",
+      "description": "rumen magnet for preventing hardware disease in cattle",
+      "query": "Rumen Magnet cow magnet rumen magnet rumen magnet for preventing hardware disease in cattle veterinary instrument photo",
+      "synonyms": [
+        "cow magnet",
+        "rumen magnet"
+      ]
+    },
+    "Wool Card": {
+      "file": "images/wool_card.webp",
+      "filename": "wool_card.webp",
+      "name": "Wool Card",
+      "description": "wool card for carding wool fibers",
+      "query": "Wool Card wool card wool card for carding wool fibers veterinary instrument photo",
+      "synonyms": [
+        "wool card"
+      ]
+    },
+    "Crile Forceps": {
+      "file": "images/crile_forceps.webp",
+      "filename": "crile_forceps.webp",
+      "name": "Crile Forceps",
+      "description": "Crile hemostat forceps for clamping vessels",
+      "query": "Crile Forceps Crile hemostat Crile hemostat forceps for clamping vessels veterinary instrument photo",
+      "synonyms": [
+        "Crile hemostat"
+      ]
+    },
+    "Scalpel Blade": {
+      "file": "images/scalpel_blade.webp",
+      "filename": "scalpel_blade.webp",
+      "name": "Scalpel Blade",
+      "description": "scalpel blade for making surgical incisions",
+      "query": "Scalpel Blade scalpel blade scalpel blade for making surgical incisions veterinary instrument photo",
+      "synonyms": [
+        "scalpel blade"
+      ]
+    },
+    "Bulb Syringe": {
+      "file": "images/bulb_syringe.webp",
+      "filename": "bulb_syringe.webp",
+      "name": "Bulb Syringe",
+      "description": "bulb syringe for suction/irrigation",
+      "query": "Bulb Syringe bulb syringe suction bulb bulb syringe for suction/irrigation veterinary instrument photo",
+      "synonyms": [
+        "bulb syringe",
+        "suction bulb"
+      ]
+    },
+    "Halstead Mosquito Forceps": {
+      "file": "images/halstead_mosquito_forceps.webp",
+      "filename": "halstead_mosquito_forceps.webp",
+      "name": "Halstead Mosquito Forceps",
+      "description": "mosquito hemostat forceps for clamping small blood vessels",
+      "query": "Halstead Mosquito Forceps mosquito hemostat Halsted mosquito mosquito hemostat forceps for clamping small blood vessels veterinary instrument photo",
+      "synonyms": [
+        "mosquito hemostat",
+        "Halsted mosquito"
+      ]
+    },
+    "Scalpel Handle": {
+      "file": "images/scalpel_handle.webp",
+      "filename": "scalpel_handle.webp",
+      "name": "Scalpel Handle",
+      "description": "scalpel handle used to hold disposable blades",
+      "query": "Scalpel Handle scalpel handle scalpel handle used to hold disposable blades veterinary instrument photo",
+      "synonyms": [
+        "scalpel handle"
+      ]
+    },
+    "Cat Bag": {
+      "file": "images/cat_bag.webp",
+      "filename": "cat_bag.webp",
+      "name": "Cat Bag",
+      "description": "cat restraint bag for handling and procedures",
+      "query": "Cat Bag cat restraint bag cat bag restraint cat restraint bag for handling and procedures veterinary instrument photo",
+      "synonyms": [
+        "cat restraint bag",
+        "cat bag restraint"
+      ]
+    },
+    "Kelly Forceps": {
+      "file": "images/kelly_forceps.webp",
+      "filename": "kelly_forceps.webp",
+      "name": "Kelly Forceps",
+      "description": "Kelly hemostat forceps for clamping vessels/tissue",
+      "query": "Kelly Forceps Kelly hemostat Kelly hemostat forceps for clamping vessels/tissue veterinary instrument photo",
+      "synonyms": [
+        "Kelly hemostat"
+      ]
+    },
+    "Lister Bandage Scissors": {
+      "file": "images/lister_bandage_scissors.webp",
+      "filename": "lister_bandage_scissors.webp",
+      "name": "Lister Bandage Scissors",
+      "description": "bandage/surgical scissors for cutting dressings",
+      "query": "Lister Bandage Scissors bandage scissors surgical scissors bandage/surgical scissors for cutting dressings veterinary instrument photo",
+      "synonyms": [
+        "bandage scissors",
+        "surgical scissors"
+      ]
+    },
+    "Catch pole (dog snare)": {
+      "file": "images/catch_pole_dog_snare.webp",
+      "filename": "catch_pole_dog_snare.webp",
+      "name": "Catch pole (dog snare)",
+      "description": "catch pole / control pole for restraining aggressive dogs",
+      "query": "Catch pole (dog snare) catch pole control pole catch pole / control pole for restraining aggressive dogs veterinary instrument photo",
+      "synonyms": [
+        "catch pole",
+        "control pole"
+      ]
+    },
+    "Rat Tooth Thumb Forceps": {
+      "file": "images/rat_tooth_thumb_forceps.webp",
+      "filename": "rat_tooth_thumb_forceps.webp",
+      "name": "Rat Tooth Thumb Forceps",
+      "description": "rat-tooth thumb forceps for grasping tough tissue",
+      "query": "Rat Tooth Thumb Forceps rat tooth forceps thumb forceps rat-tooth thumb forceps for grasping tough tissue veterinary instrument photo",
+      "synonyms": [
+        "rat tooth forceps",
+        "thumb forceps"
+      ]
+    },
+    "Shedding Blade": {
+      "file": "images/shedding_blade.webp",
+      "filename": "shedding_blade.webp",
+      "name": "Shedding Blade",
+      "description": "shedding blade for removing loose hair from coat",
+      "query": "Shedding Blade shedding blade shedding blade for removing loose hair from coat veterinary instrument photo",
+      "synonyms": [
+        "shedding blade"
+      ]
+    },
+    "Butterfly Catheter": {
+      "file": "images/butterfly_catheter.webp",
+      "filename": "butterfly_catheter.webp",
+      "name": "Butterfly Catheter",
+      "description": "butterfly catheter (winged infusion set) for venipuncture",
+      "query": "Butterfly Catheter butterfly needle winged infusion set butterfly catheter (winged infusion set) for venipuncture veterinary instrument photo",
+      "synonyms": [
+        "butterfly needle",
+        "winged infusion set"
+      ]
+    },
+    "Adson Tissue Forceps": {
+      "file": "images/adson_tissue_forceps.webp",
+      "filename": "adson_tissue_forceps.webp",
+      "name": "Adson Tissue Forceps",
+      "description": "Adson tissue forceps used in surgical procedures",
+      "query": "Adson Tissue Forceps Adson forceps Adson tissue forceps used in surgical procedures veterinary instrument photo",
+      "synonyms": [
+        "Adson forceps"
+      ]
+    },
+    "Silver Nitrate Sticks": {
+      "file": "images/silver_nitrate_sticks.webp",
+      "filename": "silver_nitrate_sticks.webp",
+      "name": "Silver Nitrate Sticks",
+      "description": "silver nitrate sticks for cauterizing tissue/bleeding",
+      "query": "Silver Nitrate Sticks silver nitrate sticks silver nitrate sticks for cauterizing tissue/bleeding veterinary instrument photo",
+      "synonyms": [
+        "silver nitrate sticks"
+      ]
+    },
+    "IV Catheter": {
+      "file": "images/iv_catheter.webp",
+      "filename": "iv_catheter.webp",
+      "name": "IV Catheter",
+      "description": "IV catheter (over-the-needle) for intravenous access",
+      "query": "IV Catheter IV catheter intravenous catheter IV catheter (over-the-needle) for intravenous access veterinary instrument photo",
+      "synonyms": [
+        "IV catheter",
+        "intravenous catheter"
+      ]
+    },
+    "Babcock Tissue Forceps": {
+      "file": "images/babcock_tissue_forceps.webp",
+      "filename": "babcock_tissue_forceps.webp",
+      "name": "Babcock Tissue Forceps",
+      "description": "Babcock tissue forceps for grasping delicate tubular structures",
+      "query": "Babcock Tissue Forceps Babcock forceps Babcock tissue forceps for grasping delicate tubular structures veterinary instrument photo",
+      "synonyms": [
+        "Babcock forceps"
+      ]
+    },
+    "Small Animal Oxygen Cage": {
+      "file": "images/small_animal_oxygen_cage.webp",
+      "filename": "small_animal_oxygen_cage.webp",
+      "name": "Small Animal Oxygen Cage",
+      "description": "oxygen cage for providing supplemental oxygen to small animals",
+      "query": "Small Animal Oxygen Cage oxygen cage oxygen chamber oxygen cage for providing supplemental oxygen to small animals veterinary instrument photo",
+      "synonyms": [
+        "oxygen cage",
+        "oxygen chamber"
+      ]
+    },
+    "Urine Catheter": {
+      "file": "images/urine_catheter.webp",
+      "filename": "urine_catheter.webp",
+      "name": "Urine Catheter",
+      "description": "urinary catheter for bladder catheterization",
+      "query": "Urine Catheter urinary catheter Foley catheter urinary catheter for bladder catheterization veterinary instrument photo",
+      "synonyms": [
+        "urinary catheter",
+        "Foley catheter"
+      ]
+    },
+    "Gag Mouth Speculum": {
+      "file": "images/gag_mouth_speculum.webp",
+      "filename": "gag_mouth_speculum.webp",
+      "name": "Gag Mouth Speculum",
+      "description": "mouth speculum/gag to hold mouth open safely",
+      "query": "Gag Mouth Speculum mouth speculum oral gag mouth speculum/gag to hold mouth open safely veterinary instrument photo",
+      "synonyms": [
+        "mouth speculum",
+        "oral gag"
+      ]
+    },
+    "Snook Hook": {
+      "file": "images/snook_hook.webp",
+      "filename": "snook_hook.webp",
+      "name": "Snook Hook",
+      "description": "snook hook used for canine tail docking (hemostat/hook technique)",
+      "query": "Snook Hook tail docking snook hook snook hook used for canine tail docking (hemostat/hook technique) veterinary instrument photo",
+      "synonyms": [
+        "tail docking snook hook"
+      ]
+    },
+    "Centrifuge": {
+      "file": "images/centrifuge.webp",
+      "filename": "centrifuge.webp",
+      "name": "Centrifuge",
+      "description": "laboratory centrifuge for spinning samples (blood, urine, fecal)",
+      "query": "Centrifuge centrifuge laboratory centrifuge for spinning samples (blood, urine, fecal) veterinary instrument photo",
+      "synonyms": [
+        "centrifuge"
+      ]
+    },
+    "Squeeze Chute": {
+      "file": "images/squeeze_chute.webp",
+      "filename": "squeeze_chute.webp",
+      "name": "Squeeze Chute",
+      "description": "livestock squeeze chute for restraining cattle",
+      "query": "Squeeze Chute cattle squeeze chute cattle chute livestock squeeze chute for restraining cattle veterinary instrument photo",
+      "synonyms": [
+        "cattle squeeze chute",
+        "cattle chute"
+      ]
+    },
+    "Chain Twitch": {
+      "file": "images/chain_twitch.webp",
+      "filename": "chain_twitch.webp",
+      "name": "Chain Twitch",
+      "description": "chain twitch used to restrain horses",
+      "query": "Chain Twitch horse twitch chain twitch chain twitch used to restrain horses veterinary instrument photo",
+      "synonyms": [
+        "horse twitch",
+        "chain twitch"
+      ]
+    },
+    "Gavage Needle": {
+      "file": "images/gavage_needle.webp",
+      "filename": "gavage_needle.webp",
+      "name": "Gavage Needle",
+      "description": "gavage needle for oral feeding or dosing (tube with bulb tip)",
+      "query": "Gavage Needle gavage tube feeding needle gavage needle for oral feeding or dosing (tube with bulb tip) veterinary instrument photo",
+      "synonyms": [
+        "gavage tube",
+        "feeding needle"
+      ]
+    },
+    "Staple Remover": {
+      "file": "images/staple_remover.webp",
+      "filename": "staple_remover.webp",
+      "name": "Staple Remover",
+      "description": "veterinary equipment or instrument used in animal care",
+      "query": "Staple Remover veterinary tool veterinary equipment or instrument used in animal care veterinary instrument photo",
+      "synonyms": [
+        "veterinary tool"
+      ]
+    },
+    "Chemical Indicator Strips": {
+      "file": "images/chemical_indicator_strips.webp",
+      "filename": "chemical_indicator_strips.webp",
+      "name": "Chemical Indicator Strips",
+      "description": "veterinary equipment or instrument used in animal care",
+      "query": "Chemical Indicator Strips veterinary tool veterinary equipment or instrument used in animal care veterinary instrument photo",
+      "synonyms": [
+        "veterinary tool"
+      ]
+    },
+    "Gravity Feeder- J Tube": {
+      "file": "images/gravity_feeder_j_tube.webp",
+      "filename": "gravity_feeder_j_tube.webp",
+      "name": "Gravity Feeder- J Tube",
+      "description": "gravity feeding set for jejunostomy (J-tube) feeding",
+      "query": "Gravity Feeder- J Tube J tube feeding set gravity feeding set gravity feeding set for jejunostomy (J-tube) feeding veterinary instrument photo",
+      "synonyms": [
+        "J tube feeding set",
+        "gravity feeding set"
+      ]
+    },
+    "Steel Lift Table": {
+      "file": "images/steel_lift_table.webp",
+      "filename": "steel_lift_table.webp",
+      "name": "Steel Lift Table",
+      "description": "veterinary equipment or instrument used in animal care",
+      "query": "Steel Lift Table veterinary tool veterinary equipment or instrument used in animal care veterinary instrument photo",
+      "synonyms": [
+        "veterinary tool"
+      ]
+    },
+    "Clipper Blades": {
+      "file": "images/clipper_blades.webp",
+      "filename": "clipper_blades.webp",
+      "name": "Clipper Blades",
+      "description": "clipper blades for animal grooming clippers",
+      "query": "Clipper Blades clipper blades clipper blades for animal grooming clippers veterinary instrument photo",
+      "synonyms": [
+        "clipper blades"
+      ]
+    },
+    "Halter": {
+      "file": "images/halter.webp",
+      "filename": "halter.webp",
+      "name": "Halter",
+      "description": "livestock halter for leading/handling animals",
+      "query": "Halter cattle halter horse halter livestock halter for leading/handling animals veterinary instrument photo",
+      "synonyms": [
+        "cattle halter",
+        "horse halter"
+      ]
+    },
+    "Stethoscope": {
+      "file": "images/stethoscope.webp",
+      "filename": "stethoscope.webp",
+      "name": "Stethoscope",
+      "description": "stethoscope for listening to heart and lung sounds",
+      "query": "Stethoscope stethoscope stethoscope for listening to heart and lung sounds veterinary instrument photo",
+      "synonyms": [
+        "stethoscope"
+      ]
+    },
+    "Clipper Comb": {
+      "file": "images/clipper_comb.webp",
+      "filename": "clipper_comb.webp",
+      "name": "Clipper Comb",
+      "description": "grooming brush/comb used for animal coat care",
+      "query": "Clipper Comb grooming brush grooming comb grooming brush/comb used for animal coat care veterinary instrument photo",
+      "synonyms": [
+        "grooming brush",
+        "grooming comb"
+      ]
+    },
+    "Head Chute": {
+      "file": "images/head_chute.webp",
+      "filename": "head_chute.webp",
+      "name": "Head Chute",
+      "description": "head gate / head chute for restraining cattle at the head",
+      "query": "Head Chute head gate cattle head chute head gate / head chute for restraining cattle at the head veterinary instrument photo",
+      "synonyms": [
+        "head gate",
+        "cattle head chute"
+      ]
+    },
+    "Surgical Cap": {
+      "file": "images/surgical_cap.webp",
+      "filename": "surgical_cap.webp",
+      "name": "Surgical Cap",
+      "description": "surgical cap to cover hair in sterile procedures",
+      "query": "Surgical Cap surgical cap surgical cap to cover hair in sterile procedures veterinary instrument photo",
+      "synonyms": [
+        "surgical cap"
+      ]
+    },
+    "Cold Sterile Tray": {
+      "file": "images/cold_sterile_tray.webp",
+      "filename": "cold_sterile_tray.webp",
+      "name": "Cold Sterile Tray",
+      "description": "veterinary equipment or instrument used in animal care",
+      "query": "Cold Sterile Tray veterinary tool veterinary equipment or instrument used in animal care veterinary instrument photo",
+      "synonyms": [
+        "veterinary tool"
+      ]
+    },
+    "Hog Snare": {
+      "file": "images/hog_snare.webp",
+      "filename": "hog_snare.webp",
+      "name": "Hog Snare",
+      "description": "hog snare for restraining pigs",
+      "query": "Hog Snare pig snare hog snare hog snare for restraining pigs veterinary instrument photo",
+      "synonyms": [
+        "pig snare",
+        "hog snare"
+      ]
+    },
+    "Surgical Drape": {
+      "file": "images/surgical_drape.webp",
+      "filename": "surgical_drape.webp",
+      "name": "Surgical Drape",
+      "description": "surgical drape for maintaining a sterile field",
+      "query": "Surgical Drape surgical drape surgical drape for maintaining a sterile field veterinary instrument photo",
+      "synonyms": [
+        "surgical drape"
+      ]
+    },
+    "Curry Comb": {
+      "file": "images/curry_comb.webp",
+      "filename": "curry_comb.webp",
+      "name": "Curry Comb",
+      "description": "curry comb for loosening dirt and hair on horses",
+      "query": "Curry Comb curry comb curry comb for loosening dirt and hair on horses veterinary instrument photo",
+      "synonyms": [
+        "curry comb"
+      ]
+    },
+    "Hoof Knife": {
+      "file": "images/hoof_knife.webp",
+      "filename": "hoof_knife.webp",
+      "name": "Hoof Knife",
+      "description": "hoof knife for trimming hoof sole/frog",
+      "query": "Hoof Knife hoof knife hoof knife for trimming hoof sole/frog veterinary instrument photo",
+      "synonyms": [
+        "hoof knife"
+      ]
+    },
+    "Surgical Gown": {
+      "file": "images/surgical_gown.webp",
+      "filename": "surgical_gown.webp",
+      "name": "Surgical Gown",
+      "description": "surgical gown for sterile procedures",
+      "query": "Surgical Gown surgical gown surgical gown for sterile procedures veterinary instrument photo",
+      "synonyms": [
+        "surgical gown"
+      ]
+    },
+    "Flea Comb": {
+      "file": "images/flea_comb.webp",
+      "filename": "flea_comb.webp",
+      "name": "Flea Comb",
+      "description": "flea comb for removing fleas and debris",
+      "query": "Flea Comb flea comb flea comb for removing fleas and debris veterinary instrument photo",
+      "synonyms": [
+        "flea comb"
+      ]
+    },
+    "Hoof Pick": {
+      "file": "images/hoof_pick.webp",
+      "filename": "hoof_pick.webp",
+      "name": "Hoof Pick",
+      "description": "hoof pick for cleaning hooves",
+      "query": "Hoof Pick hoof pick hoof pick for cleaning hooves veterinary instrument photo",
+      "synonyms": [
+        "hoof pick"
+      ]
+    },
+    "Surgical Masks": {
+      "file": "images/surgical_masks.webp",
+      "filename": "surgical_masks.webp",
+      "name": "Surgical Masks",
+      "description": "surgical masks for infection control",
+      "query": "Surgical Masks surgical mask surgical masks for infection control veterinary instrument photo",
+      "synonyms": [
+        "surgical mask"
+      ]
+    },
+    "Scotch Comb": {
+      "file": "images/scotch_comb.webp",
+      "filename": "scotch_comb.webp",
+      "name": "Scotch Comb",
+      "description": "scotch comb for grooming hair/coat",
+      "query": "Scotch Comb scotch comb scotch comb for grooming hair/coat veterinary instrument photo",
+      "synonyms": [
+        "scotch comb"
+      ]
+    },
+    "Hoof Rasp": {
+      "file": "images/hoof_rasp.webp",
+      "filename": "hoof_rasp.webp",
+      "name": "Hoof Rasp",
+      "description": "hoof rasp for filing and shaping hooves",
+      "query": "Hoof Rasp hoof rasp hoof rasp for filing and shaping hooves veterinary instrument photo",
+      "synonyms": [
+        "hoof rasp"
+      ]
+    },
+    "Surgical Tray": {
+      "file": "images/surgical_tray.webp",
+      "filename": "surgical_tray.webp",
+      "name": "Surgical Tray",
+      "description": "surgical instrument tray/pack",
+      "query": "Surgical Tray surgical tray surgical instrument tray/pack veterinary instrument photo",
+      "synonyms": [
+        "surgical tray"
+      ]
+    },
+    "Cover Slips": {
+      "file": "images/cover_slips.webp",
+      "filename": "cover_slips.webp",
+      "name": "Cover Slips",
+      "description": "microscope cover slips used over specimen on a slide",
+      "query": "Cover Slips coverslip microscope coverslip microscope cover slips used over specimen on a slide veterinary instrument photo",
+      "synonyms": [
+        "coverslip",
+        "microscope coverslip"
+      ]
+    },
+    "Hoof Trimmers": {
+      "file": "images/hoof_trimmers.webp",
+      "filename": "hoof_trimmers.webp",
+      "name": "Hoof Trimmers",
+      "description": "hoof trimmers/nippers for cutting hoof wall",
+      "query": "Hoof Trimmers hoof nippers hoof trimmers hoof trimmers/nippers for cutting hoof wall veterinary instrument photo",
+      "synonyms": [
+        "hoof nippers",
+        "hoof trimmers"
+      ]
+    },
+    "Suture Material": {
+      "file": "images/suture_material.webp",
+      "filename": "suture_material.webp",
+      "name": "Suture Material",
+      "description": "veterinary equipment or instrument used in animal care",
+      "query": "Suture Material veterinary tool veterinary equipment or instrument used in animal care veterinary instrument photo",
+      "synonyms": [
+        "veterinary tool"
+      ]
+    },
+    "Barnes Dehorner": {
+      "file": "images/barnes_dehorner.webp",
+      "filename": "barnes_dehorner.webp",
+      "name": "Barnes Dehorner",
+      "description": "dehorner tool used to remove horn buds/horns in cattle/goats",
+      "query": "Barnes Dehorner dehorner cattle dehorner dehorner tool used to remove horn buds/horns in cattle/goats veterinary instrument photo",
+      "synonyms": [
+        "dehorner",
+        "cattle dehorner"
+      ]
+    },
+    "Suture Needle": {
+      "file": "images/suture_needle.webp",
+      "filename": "suture_needle.webp",
+      "name": "Suture Needle",
+      "description": "suture needle used for placing stitches",
+      "query": "Suture Needle suture needle surgical needle suture needle used for placing stitches veterinary instrument photo",
+      "synonyms": [
+        "suture needle",
+        "surgical needle"
+      ]
+    },
+    "Electric Dehorner": {
+      "file": "images/electric_dehorner.webp",
+      "filename": "electric_dehorner.webp",
+      "name": "Electric Dehorner",
+      "description": "dehorner tool used to remove horn buds/horns in cattle/goats",
+      "query": "Electric Dehorner dehorner cattle dehorner dehorner tool used to remove horn buds/horns in cattle/goats veterinary instrument photo",
+      "synonyms": [
+        "dehorner",
+        "cattle dehorner"
+      ]
+    },
+    "Hydraulic Chute": {
+      "file": "images/hydraulic_chute.webp",
+      "filename": "hydraulic_chute.webp",
+      "name": "Hydraulic Chute",
+      "description": "hydraulic livestock chute for restraint and handling",
+      "query": "Hydraulic Chute hydraulic cattle chute hydraulic livestock chute for restraint and handling veterinary instrument photo",
+      "synonyms": [
+        "hydraulic cattle chute"
+      ]
+    },
+    "Tattooing Instrument": {
+      "file": "images/tattooing_instrument.webp",
+      "filename": "tattooing_instrument.webp",
+      "name": "Tattooing Instrument",
+      "description": "tattooing instrument for livestock identification",
+      "query": "Tattooing Instrument livestock tattoo pliers tattoo instrument tattooing instrument for livestock identification veterinary instrument photo",
+      "synonyms": [
+        "livestock tattoo pliers",
+        "tattoo instrument"
+      ]
+    },
+    "Scoop or Tube Dehorner": {
+      "file": "images/scoop_or_tube_dehorner.webp",
+      "filename": "scoop_or_tube_dehorner.webp",
+      "name": "Scoop or Tube Dehorner",
+      "description": "dehorner tool used to remove horn buds/horns in cattle/goats",
+      "query": "Scoop or Tube Dehorner dehorner cattle dehorner dehorner tool used to remove horn buds/horns in cattle/goats veterinary instrument photo",
+      "synonyms": [
+        "dehorner",
+        "cattle dehorner"
+      ]
+    },
+    "IV Administration": {
+      "file": "images/iv_administration.webp",
+      "filename": "iv_administration.webp",
+      "name": "IV Administration",
+      "description": "IV administration set (drip line) for delivering IV fluids",
+      "query": "IV Administration IV tubing drip set IV administration set (drip line) for delivering IV fluids veterinary instrument photo",
+      "synonyms": [
+        "IV tubing",
+        "drip set"
+      ]
+    },
+    "IV Fluids": {
+      "file": "images/iv_fluids.webp",
+      "filename": "iv_fluids.webp",
+      "name": "IV Fluids",
+      "description": "veterinary equipment or instrument used in animal care",
+      "query": "IV Fluids veterinary tool veterinary equipment or instrument used in animal care veterinary instrument photo",
+      "synonyms": [
+        "veterinary tool"
+      ]
+    },
+    "Tourniquet": {
+      "file": "images/tourniquet.webp",
+      "filename": "tourniquet.webp",
+      "name": "Tourniquet",
+      "description": "tourniquet used to occlude veins for venipuncture",
+      "query": "Tourniquet tourniquet tourniquet used to occlude veins for venipuncture veterinary instrument photo",
+      "synonyms": [
+        "tourniquet"
+      ]
+    },
+    "Dental Floats": {
+      "file": "images/dental_floats.webp",
+      "filename": "dental_floats.webp",
+      "name": "Dental Floats",
+      "description": "dental float tool for filing/leveling horse teeth",
+      "query": "Dental Floats dental float equine float dental float tool for filing/leveling horse teeth veterinary instrument photo",
+      "synonyms": [
+        "dental float",
+        "equine float"
+      ]
+    },
+    "Laryngoscopes": {
+      "file": "images/laryngoscopes.webp",
+      "filename": "laryngoscopes.webp",
+      "name": "Laryngoscopes",
+      "description": "laryngoscope for visualizing the larynx during intubation",
+      "query": "Laryngoscopes laryngoscope intubation scope laryngoscope for visualizing the larynx during intubation veterinary instrument photo",
+      "synonyms": [
+        "laryngoscope",
+        "intubation scope"
+      ]
+    },
+    "Trocar & Cannula": {
+      "file": "images/trocar_and_cannula.webp",
+      "filename": "trocar_and_cannula.webp",
+      "name": "Trocar & Cannula",
+      "description": "trocar and cannula used to relieve rumen bloat (bloat trocar)",
+      "query": "Trocar & Cannula bloat trocar trocar cannula trocar and cannula used to relieve rumen bloat (bloat trocar) veterinary instrument photo",
+      "synonyms": [
+        "bloat trocar",
+        "trocar cannula"
+      ]
+    },
+    "Dental Retractor": {
+      "file": "images/dental_retractor.webp",
+      "filename": "dental_retractor.webp",
+      "name": "Dental Retractor",
+      "description": "dental retractor for holding mouth open during dental exam",
+      "query": "Dental Retractor dental retractor mouth retractor dental retractor for holding mouth open during dental exam veterinary instrument photo",
+      "synonyms": [
+        "dental retractor",
+        "mouth retractor"
+      ]
+    },
+    "Lead Rope": {
+      "file": "images/lead_rope.webp",
+      "filename": "lead_rope.webp",
+      "name": "Lead Rope",
+      "description": "lead rope used with a halter to lead an animal",
+      "query": "Lead Rope lead line lead rope lead rope used with a halter to lead an animal veterinary instrument photo",
+      "synonyms": [
+        "lead line",
+        "lead rope"
+      ]
+    },
+    "Weight Tape": {
+      "file": "images/weight_tape.webp",
+      "filename": "weight_tape.webp",
+      "name": "Weight Tape",
+      "description": "weight tape for estimating livestock weight by girth",
+      "query": "Weight Tape cattle weight tape horse weight tape weight tape for estimating livestock weight by girth veterinary instrument photo",
+      "synonyms": [
+        "cattle weight tape",
+        "horse weight tape"
+      ]
+    },
+    "Dental Scaler": {
+      "file": "images/dental_scaler.webp",
+      "filename": "dental_scaler.webp",
+      "name": "Dental Scaler",
+      "description": "dental scaler for removing tartar/calculus from teeth",
+      "query": "Dental Scaler dental scaler tartar scaler dental scaler for removing tartar/calculus from teeth veterinary instrument photo",
+      "synonyms": [
+        "dental scaler",
+        "tartar scaler"
+      ]
+    }
+  },
+  "skipped": {}
+}
