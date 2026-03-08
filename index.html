@@ -28,7 +28,6 @@
         linear-gradient(180deg,#dcf6ff 0%,#fff6d6 52%,#e9ffe8 100%);
     }
 
-    /* Floating clouds */
     .clouds{position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:0;}
     .cloud{
       position:absolute; top:10%;
@@ -53,7 +52,14 @@
       to   { transform: translateX(calc(100vw + 420px)); }
     }
 
-    .wrap{position:relative; z-index:1; height:100%; display:grid; place-items:center; padding:24px;}
+    .wrap{
+      position:relative;
+      z-index:1;
+      height:100%;
+      display:grid;
+      place-items:center;
+      padding:24px;
+    }
     .card{
       width:min(980px, 96vw);
       background:var(--card);
@@ -92,11 +98,6 @@
       gap:18px;
       padding:10px 18px 18px;
       align-items:stretch;
-    }
-    @media (max-width: 920px){
-      body{overflow:auto}
-      .wrap{height:auto; min-height:100%}
-      .main{grid-template-columns:1fr}
     }
 
     .imgbox{
@@ -137,6 +138,8 @@
       cursor:pointer;
       box-shadow:0 10px 22px rgba(0,0,0,.08);
       transition: transform .08s ease, filter .08s ease;
+      overflow-wrap:anywhere;
+      word-break:break-word;
     }
     .opt:hover{transform: translateY(-1px); filter:brightness(1.02)}
     .opt:active{transform: translateY(0px); filter:brightness(.99)}
@@ -173,7 +176,6 @@
       box-shadow:0 12px 30px rgba(0,0,0,.12);
     }
 
-    /* Emoji burst layer */
     .burstLayer{position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:9999;}
     .emoji{
       position:absolute;
@@ -195,6 +197,83 @@
       transition:opacity .18s ease, transform .18s ease;
     }
     .toast.show{opacity:1; transform:translateX(-50%) translateY(-2px)}
+
+    @media (max-width: 920px){
+      body{overflow:auto}
+      .wrap{
+        height:auto;
+        min-height:100%;
+        place-items:start center;
+        padding:12px;
+      }
+      .card{
+        width:min(760px, 100%);
+        border-radius:20px;
+      }
+      .main{
+        grid-template-columns:1fr;
+        gap:12px;
+        padding:8px 12px 12px;
+      }
+      .imgbox{
+        min-height:0;
+      }
+      .imgbox img{
+        height:min(34vh, 280px);
+      }
+    }
+
+    @media (max-width: 560px){
+      .wrap{padding:8px;}
+      .card{border-radius:16px;}
+      .topbar{
+        padding:10px 10px 6px;
+        gap:8px;
+      }
+      .pill{
+        padding:6px 9px;
+        gap:7px;
+        font-size:12px;
+      }
+      .main{
+        gap:8px;
+        padding:6px 10px 10px;
+      }
+      .imgbox{
+        border-radius:16px;
+        padding:8px;
+      }
+      .imgbox img{
+        height:min(26vh, 190px);
+        border-radius:12px;
+      }
+      .opts{gap:7px;}
+      .opt{
+        border-radius:14px;
+        padding:10px 11px;
+        font:600 clamp(13px, 3.7vw, 15px)/1.08 "Fredoka",system-ui;
+        box-shadow:0 8px 18px rgba(0,0,0,.08);
+      }
+      .end{
+        padding:16px 12px 18px;
+      }
+      .end .big{
+        font-size:14px;
+        padding:8px 12px;
+      }
+      .restart{
+        padding:10px 14px;
+        font-size:14px;
+      }
+      .toast{
+        max-width:92vw;
+        font-size:12px;
+        padding:8px 12px;
+      }
+      .emoji{
+        font-size:22px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -234,7 +313,8 @@
       </div>
     </div>
   </div>
-<audio id="sndYes" preload="auto">
+
+  <audio id="sndYes" preload="auto">
     <source src="yes.mp3" type="audio/mpeg">
   </audio>
   <audio id="sndNo" preload="auto">
@@ -244,11 +324,6 @@
 
 <script>
 (() => {
-  // Put these next to this HTML:
-  //   image_manifest.json
-  //   images/ (folder)
-  // Open via http://localhost/... (XAMPP). file:// blocks fetch().
-
   const MANIFEST_URL = "image_manifest.json";
 
   const MASTER = Object.freeze(["Ambu bag", "Hypodermic Needles", "Leur Lock Syringe", "Anesthetic Machines 1& 2", "Drench Gun", "Automatic Multi-Dose Syringe", "Animal Clippers", "Ear Notcher", "Slip Tip Syringe", "Autoclave", "Ear Tag Pliers", "Microscope", "Autoclave Tape Indicator", "Ear Tags", "Microscope Slides", "Backhaus Towel Clamp", "Elastrator", "Muzzle", "Balling Gun", "Elizabethan Collar", "Guillotine Nail Clippers", "Bandaging Mati-Elasticon", "Emasculators", "Plier Nail Clippers", "Elasticon", "Endotracheal Tube", "Mayor-Hegar Needle Holder", "Rolled Gauze", "Fecal Loop", "Olsen-Hegar Needle Holder", "Vet Wrap", "Fecalyzers", "Obstetrical Chain and Handle", "Bands (castration or docking)", "Feeding Tube", "Ophthalmoscope", "Basket Muzzle", "Small/Large Animal", "Otoscope", "Betadine", "Fetal Extractor", "Paste Gun", "Body Brush (soft bristle)", "Fingertip Toothbrush", "Pig Tooth Nippers", "Dandy Brush (stiff bristle)", "Alligator Forceps", "Pill Counting Tray", "Pin Brush", "Allis Tissue Forceps", "Radiology PPE", "Slicker Brush", "Adson-Brown-Thumb Forcep", "Rumen Magnet", "Wool Card", "Crile Forceps", "Scalpel Blade", "Bulb Syringe", "Halstead Mosquito Forceps", "Scalpel Handle", "Cat Bag", "Kelly Forceps", "Lister Bandage Scissors", "Catch pole (dog snare)", "Rat Tooth Thumb Forceps", "Shedding Blade", "Butterfly Catheter", "Adson Tissue Forceps", "Silver Nitrate Sticks", "IV Catheter", "Babcock Tissue Forceps", "Small Animal Oxygen Cage", "Urine Catheter", "Gag Mouth Speculum", "Snook Hook", "Centrifuge", "Squeeze Chute", "Chain Twitch", "Gavage Needle", "Staple Remover", "Chemical Indicator Strips", "Gravity Feeder- J Tube", "Steel Lift Table", "Clipper Blades", "Halter", "Stethoscope", "Clipper Comb", "Head Chute", "Surgical Cap", "Cold Sterile Tray", "Hog Snare", "Surgical Drape", "Curry Comb", "Hoof Knife", "Surgical Gown", "Flea Comb", "Hoof Pick", "Surgical Masks", "Scotch Comb", "Hoof Rasp", "Surgical Tray", "Cover Slips", "Hoof Trimmers", "Suture Material", "Barnes Dehorner", "Suture Needle", "Electric Dehorner", "Hydraulic Chute", "Tattooing Instrument", "Scoop or Tube Dehorner", "IV Administration", "IV Fluids", "Tourniquet", "Dental Floats", "Laryngoscopes", "Trocar & Cannula", "Dental Retractor", "Lead Rope", "Weight Tape", "Dental Scaler"]);
@@ -272,8 +347,10 @@
     sndNo: document.getElementById("sndNo"),
   };
 
-  let manifest = null; // expected: manifest.images[item].file -> "images/.."
-  let remaining = new Set(MASTER);
+  let manifest = null;
+  let unseen = [];
+  let reviewQueue = [];
+  let mastered = new Set();
   let asked = 0;
   let current = null;
   let locked = false;
@@ -284,12 +361,9 @@
     setTimeout(() => el.toast.classList.remove("show"), 900);
   }
 
-  // Resolve and probe sound URLs once at startup.
   const SOUND = { yesUrl: null, noUrl: null, ready: false };
 
   async function probeUrl(url) {
-    // Try to fetch 1 byte so we don't download the whole file just to test existence.
-    // Some servers don't support Range; fall back to normal fetch.
     try {
       let r = await fetch(url, { method: "GET", headers: { "Range": "bytes=0-0" }, cache: "no-store" });
       if (r.ok) return true;
@@ -305,8 +379,8 @@
     const base = new URL(".", window.location.href).href;
 
     const yesCandidates = [
-      new URL("yes.mp3", base).href,               // same folder as HTML
-      new URL("/yes.mp3", window.location.origin).href, // site root
+      new URL("yes.mp3", base).href,
+      new URL("/yes.mp3", window.location.origin).href,
     ];
     const noCandidates = [
       new URL("no.mp3", base).href,
@@ -323,15 +397,12 @@
     SOUND.ready = true;
 
     if (!SOUND.yesUrl || !SOUND.noUrl) {
-      // Don't spam; just one toast.
       toast("Sound files not found (check yes.mp3/no.mp3 location)");
       console.warn("Sound URL resolution:", SOUND, { yesCandidates, noCandidates });
     }
   }
 
   function playSoundUrl(url) {
-    // Fire-and-forget playback that won't get cut off when the UI updates.
-    // Use a fresh Audio instance each time so rapid answers don't interrupt previous sound.
     try {
       if (!url) return;
 
@@ -356,8 +427,6 @@
         p.catch((err) => {
           cleanup();
           console.warn("Audio play blocked/rejected:", err);
-          // Most common reason: browser blocked playback because it didn't consider this a gesture.
-          // We won't toast every time; only once.
           if (!window.__soundWarned) {
             window.__soundWarned = true;
             toast("Sound blocked by browser policy");
@@ -370,7 +439,6 @@
   }
 
   function playSound(aud) {
-    // Back-compat wrapper: choose yes/no by element id
     const id = aud && aud.id ? aud.id : "";
     if (id === "sndYes") playSoundUrl(SOUND.yesUrl);
     else if (id === "sndNo") playSoundUrl(SOUND.noUrl);
@@ -390,16 +458,8 @@
     return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
   }
 
-  function randInt(n) { return Math.floor(Math.random() * n); }
-
-  function pickRandomFromSet(s) {
-    const idx = randInt(s.size);
-    let i = 0;
-    for (const v of s) {
-      if (i === idx) return v;
-      i++;
-    }
-    return null;
+  function randInt(n) {
+    return Math.floor(Math.random() * n);
   }
 
   function shuffle(arr) {
@@ -410,12 +470,13 @@
     return arr;
   }
 
-  function buildOptions(correct, count=6) {
-    const opts = new Set([correct]);
-    while (opts.size < count) {
-      opts.add(MASTER[randInt(MASTER.length)]);
-    }
-    return shuffle([...opts]);
+  function buildOptions(correct, count = 6) {
+    const pool = MASTER.filter(item => item !== correct);
+    shuffle(pool);
+    const distractors = pool.slice(0, Math.max(0, count - 1));
+    const correctIndex = randInt(distractors.length + 1);
+    distractors.splice(correctIndex, 0, correct);
+    return distractors;
   }
 
   function getImagePath(item) {
@@ -446,7 +507,6 @@
     const w = window.innerWidth;
     const h = window.innerHeight;
 
-    // burst around the quiz card area (roughly centered)
     const centerX = w * (0.50 + (Math.random()*0.08 - 0.04));
     const centerY = h * (0.48 + (Math.random()*0.08 - 0.04));
 
@@ -459,11 +519,9 @@
       e.textContent = pool[randInt(pool.length)];
 
       const angle = Math.random() * Math.PI * 2;
-
-      // Use pixels/second (NOT pixels/ms)
-      const speed = 180 + Math.random() * 260;   // px/s
+      const speed = 180 + Math.random() * 260;
       const vx = Math.cos(angle) * speed;
-      const vy = Math.sin(angle) * speed - (220 + Math.random() * 220); // initial upward kick
+      const vy = Math.sin(angle) * speed - (220 + Math.random() * 220);
 
       const x0 = centerX + (Math.random() * 36 - 18);
       const y0 = centerY + (Math.random() * 28 - 14);
@@ -472,23 +530,21 @@
       e.style.top  = y0 + "px";
       el.burstLayer.appendChild(e);
 
-      const life = 1.25 + Math.random() * 0.55;  // seconds
+      const life = 1.25 + Math.random() * 0.55;
       const rot0 = Math.random() * 80 - 40;
       const rotv = Math.random() * 260 - 130;
 
       function tick(t) {
-        const dt = (t - t0) / 1000; // seconds since burst start
+        const dt = (t - t0) / 1000;
         const p = dt / life;
         if (p >= 1) { e.remove(); return; }
 
-        const g = 520; // px/s^2 (gravity)
+        const g = 520;
         const x = x0 + vx * dt;
         const y = y0 + vy * dt + 0.5 * g * dt * dt;
-
         const rot = rot0 + rotv * p;
-
-        // slight ease-out and fade
         const scale = 1 - p * 0.22;
+
         e.style.transform = `translate(${x - x0}px, ${y - y0}px) rotate(${rot}deg) scale(${scale})`;
         e.style.opacity = String(1 - p);
 
@@ -498,11 +554,38 @@
     }
   }
 
-  function renderQuestion() {
-    el.remain.textContent = String(remaining.size);
+  function syncCounters() {
+    el.remain.textContent = String(TOTAL - mastered.size);
     el.asked.textContent = String(asked);
+  }
 
-    if (remaining.size === 0) {
+  function nextQuestion() {
+    reviewQueue = reviewQueue.filter(item => !mastered.has(item));
+    if (unseen.length > 0) return unseen.pop();
+    if (reviewQueue.length > 0) return reviewQueue.shift();
+    return null;
+  }
+
+  function queueForReview(item) {
+    if (mastered.has(item)) return;
+    if (reviewQueue.includes(item)) return;
+    reviewQueue.push(item);
+  }
+
+  function resetQuizState() {
+    unseen = shuffle(MASTER.slice());
+    reviewQueue = [];
+    mastered = new Set();
+    asked = 0;
+    current = null;
+    locked = false;
+    syncCounters();
+  }
+
+  function renderQuestion() {
+    syncCounters();
+
+    if (mastered.size === TOTAL) {
       el.main.style.display = "none";
       el.end.style.display = "block";
       const variance = asked - TOTAL;
@@ -513,7 +596,15 @@
       return;
     }
 
-    current = pickRandomFromSet(remaining);
+    current = nextQuestion();
+    if (!current) {
+      el.main.style.display = "none";
+      el.end.style.display = "block";
+      el.summary1.textContent = `Mastered: ${mastered.size} of ${TOTAL}`;
+      el.summary2.textContent = `Questions asked: ${asked}`;
+      return;
+    }
+
     setImage(current);
 
     const options = buildOptions(current, 6);
@@ -528,24 +619,28 @@
     }
   }
 
-  function lockButtons(disabled=true) {
+  function lockButtons(disabled = true) {
     for (const b of el.opts.querySelectorAll("button")) b.disabled = disabled;
   }
 
   function onAnswer(choice) {
-    if (locked) return;
+    if (locked || !current) return;
     locked = true;
     lockButtons(true);
     asked++;
 
     if (choice === current) {
       playSound(el.sndYes);
-      remaining.delete(current);
+      mastered.add(current);
+      reviewQueue = reviewQueue.filter(item => item !== current);
       emojiBurst("happy");
     } else {
       playSound(el.sndNo);
+      queueForReview(current);
       emojiBurst("sad");
     }
+
+    syncCounters();
 
     setTimeout(() => {
       locked = false;
@@ -569,16 +664,15 @@
     }
 
     initSoundUrls();
+    resetQuizState();
     renderQuestion();
   }
 
   el.restart.addEventListener("click", () => {
-    remaining = new Set(MASTER);
-    asked = 0;
-    locked = false;
     el.end.style.display = "none";
     el.main.style.display = "";
     initSoundUrls();
+    resetQuizState();
     renderQuestion();
   });
 
