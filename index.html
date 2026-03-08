@@ -91,6 +91,20 @@
     .statusDot{width:10px;height:10px;border-radius:999px;background:#ffb300; box-shadow:0 0 0 4px rgba(255,179,0,.18)}
     .statusDot.ok{background:#28c76f; box-shadow:0 0 0 4px rgba(40,199,111,.18)}
     .statusDot.bad{background:#ff4d4f; box-shadow:0 0 0 4px rgba(255,77,79,.18)}
+    .selectWrap{gap:8px}
+    .selectWrap label{font-weight:600}
+    .gameSelect{
+      appearance:none;
+      border:1px solid rgba(0,0,0,.10);
+      background:rgba(255,255,255,.95);
+      border-radius:999px;
+      padding:7px 30px 7px 12px;
+      font:600 14px/1 "Fredoka",system-ui;
+      color:var(--ink);
+      box-shadow:0 6px 14px rgba(0,0,0,.06);
+      cursor:pointer;
+      max-width:220px;
+    }
 
     .main{
       display:grid;
@@ -100,6 +114,22 @@
       align-items:stretch;
     }
 
+    .visualArea{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .promptBox{
+      border-radius:18px;
+      background:rgba(255,255,255,.84);
+      border:1px solid rgba(0,0,0,.07);
+      box-shadow:0 10px 24px rgba(0,0,0,.08);
+      padding:14px 16px;
+      font:600 clamp(18px, 2.4vw, 28px)/1.12 "Fredoka",system-ui;
+      text-align:center;
+      overflow-wrap:anywhere;
+      word-break:break-word;
+    }
     .imgbox{
       border-radius:22px;
       background:rgba(255,255,255,.75);
@@ -144,6 +174,59 @@
     .opt:hover{transform: translateY(-1px); filter:brightness(1.02)}
     .opt:active{transform: translateY(0px); filter:brightness(.99)}
     .opt[disabled]{cursor:default; opacity:.65; transform:none}
+
+    .nameGrid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:12px;
+    }
+    .imageChoice{
+      appearance:none;
+      border:1px solid rgba(0,0,0,.10);
+      background:rgba(255,255,255,.92);
+      border-radius:18px;
+      padding:10px;
+      cursor:pointer;
+      box-shadow:0 10px 22px rgba(0,0,0,.08);
+      transition: transform .08s ease, filter .08s ease;
+    }
+    .imageChoice:hover{transform: translateY(-1px); filter:brightness(1.02)}
+    .imageChoice:active{transform: translateY(0px); filter:brightness(.99)}
+    .imageChoice[disabled]{cursor:default; opacity:.65; transform:none}
+    .imageChoice img{
+      display:block;
+      width:100%;
+      aspect-ratio:4 / 3;
+      object-fit:contain;
+      border-radius:14px;
+      border:1px solid rgba(0,0,0,.06);
+      background:#fff;
+      box-shadow:0 8px 18px rgba(0,0,0,.08);
+    }
+
+    .main.mode-image .promptBox,
+    .main.mode-image .nameGrid{display:none}
+    .main.mode-name{
+      grid-template-columns:1fr;
+    }
+    .main.mode-name .visualArea{
+      max-width:760px;
+      width:100%;
+      margin:0 auto;
+    }
+    .main.mode-name .nameGrid{
+      max-width:720px;
+      width:100%;
+      margin:0 auto;
+    }
+    .main.mode-name .imageChoice{
+      padding:8px;
+    }
+    .main.mode-name .imageChoice img{
+      max-height:170px;
+    }
+    .main.mode-name .imgbox,
+    .main.mode-name .opts{display:none}
 
     .end{
       display:none;
@@ -221,6 +304,9 @@
       .imgbox img{
         height:min(34vh, 280px);
       }
+      .main.mode-name .imageChoice img{
+        max-height:130px;
+      }
     }
 
     @media (max-width: 560px){
@@ -235,9 +321,19 @@
         gap:7px;
         font-size:12px;
       }
+      .gameSelect{
+        font-size:12px;
+        padding:6px 26px 6px 10px;
+        max-width:180px;
+      }
       .main{
         gap:8px;
         padding:6px 10px 10px;
+      }
+      .promptBox{
+        border-radius:14px;
+        padding:10px 12px;
+        font:600 clamp(16px, 4.7vw, 20px)/1.08 "Fredoka",system-ui;
       }
       .imgbox{
         border-radius:16px;
@@ -253,6 +349,18 @@
         padding:10px 11px;
         font:600 clamp(13px, 3.7vw, 15px)/1.08 "Fredoka",system-ui;
         box-shadow:0 8px 18px rgba(0,0,0,.08);
+      }
+      .nameGrid{gap:8px;}
+      .imageChoice{
+        border-radius:14px;
+        padding:8px;
+      }
+      .main.mode-name .imageChoice{
+        padding:6px;
+      }
+      .imageChoice img{border-radius:12px;}
+      .main.mode-name .imageChoice img{
+        max-height:110px;
       }
       .end{
         padding:16px 12px 18px;
@@ -290,17 +398,24 @@
   <div class="wrap">
     <div class="card">
       <div class="topbar">
-        <div class="pill">
-          <span class="statusDot" id="dot"></span>
-          <span id="manifestLabel">image_manifest.json: loading…</span>
+        <div class="pill selectWrap">
+          <label for="gameType">Select Game Type</label>
+          <select id="gameType" class="gameSelect">
+            <option value="image">Image Recognition</option>
+            <option value="name">Name Recognition</option>
+          </select>
         </div>
         <div class="pill"><span>Remaining:</span> <b id="remain">—</b></div>
         <div class="pill"><span>Questions:</span> <b id="asked">0</b></div>
       </div>
 
-      <div class="main" id="main">
-        <div class="imgbox">
-          <img id="img" alt="quiz item image" />
+      <div class="main mode-image" id="main">
+        <div class="visualArea">
+          <div class="promptBox" id="promptBox"></div>
+          <div class="imgbox" id="imgbox">
+            <img id="img" alt="quiz item image" />
+          </div>
+          <div class="nameGrid" id="nameGrid"></div>
         </div>
         <div class="opts" id="opts"></div>
       </div>
@@ -330,11 +445,13 @@
   const TOTAL = MASTER.length;
 
   const el = {
-    dot: document.getElementById("dot"),
-    manifestLabel: document.getElementById("manifestLabel"),
     remain: document.getElementById("remain"),
     asked: document.getElementById("asked"),
+    gameType: document.getElementById("gameType"),
     img: document.getElementById("img"),
+    imgbox: document.getElementById("imgbox"),
+    promptBox: document.getElementById("promptBox"),
+    nameGrid: document.getElementById("nameGrid"),
     opts: document.getElementById("opts"),
     main: document.getElementById("main"),
     end: document.getElementById("end"),
@@ -348,6 +465,7 @@
   };
 
   let manifest = null;
+  let gameType = "image";
   let unseen = [];
   let reviewQueue = [];
   let mastered = new Set();
@@ -470,7 +588,7 @@
     return arr;
   }
 
-  function buildOptions(correct, count = 6) {
+  function buildChoices(correct, count = 6) {
     const pool = MASTER.filter(item => item !== correct);
     shuffle(pool);
     const distractors = pool.slice(0, Math.max(0, count - 1));
@@ -497,6 +615,21 @@
       toast("image missing");
     };
     el.img.src = p;
+  }
+
+  function fillImageElement(imgEl, item) {
+    const p = getImagePath(item);
+    imgEl.alt = "quiz choice image";
+    if (!p) {
+      imgEl.onerror = null;
+      imgEl.src = placeholderSvg(item);
+      return;
+    }
+    imgEl.onerror = () => {
+      imgEl.onerror = null;
+      imgEl.src = placeholderSvg(item);
+    };
+    imgEl.src = p;
   }
 
   function emojiBurst(kind) {
@@ -559,6 +692,12 @@
     el.asked.textContent = String(asked);
   }
 
+  function applyGameTypeLayout() {
+    el.main.classList.toggle("mode-image", gameType === "image");
+    el.main.classList.toggle("mode-name", gameType === "name");
+    el.promptBox.textContent = (gameType === "name") ? (current || "") : "";
+  }
+
   function nextQuestion() {
     reviewQueue = reviewQueue.filter(item => !mastered.has(item));
     if (unseen.length > 0) return unseen.pop();
@@ -584,6 +723,7 @@
 
   function renderQuestion() {
     syncCounters();
+    applyGameTypeLayout();
 
     if (mastered.size === TOTAL) {
       el.main.style.display = "none";
@@ -591,12 +731,15 @@
       const variance = asked - TOTAL;
       const sign = (variance >= 0) ? "+" : "";
       const efficiency = TOTAL > 0 ? (TOTAL / Math.max(1, asked)) : 0;
-      el.summary1.textContent = `Total items: ${TOTAL}  •  Questions asked: ${asked}`;
+      const modeLabel = gameType === "image" ? "Image Recognition" : "Name Recognition";
+      el.summary1.textContent = `${modeLabel}  •  Total items: ${TOTAL}  •  Questions asked: ${asked}`;
       el.summary2.textContent = `Variance: ${sign}${variance}  •  Efficiency: ${Math.round(efficiency*100)}%`;
       return;
     }
 
     current = nextQuestion();
+    applyGameTypeLayout();
+
     if (!current) {
       el.main.style.display = "none";
       el.end.style.display = "block";
@@ -605,22 +748,42 @@
       return;
     }
 
-    setImage(current);
-
-    const options = buildOptions(current, 6);
     el.opts.innerHTML = "";
-    for (const label of options) {
+    el.nameGrid.innerHTML = "";
+
+    if (gameType === "image") {
+      setImage(current);
+      const options = buildChoices(current, 6);
+      for (const label of options) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "opt";
+        btn.textContent = label;
+        btn.addEventListener("click", () => onAnswer(label));
+        el.opts.appendChild(btn);
+      }
+      return;
+    }
+
+    const imageChoices = buildChoices(current, 4);
+    for (const label of imageChoices) {
       const btn = document.createElement("button");
       btn.type = "button";
-      btn.className = "opt";
-      btn.textContent = label;
+      btn.className = "imageChoice";
+      btn.setAttribute("aria-label", "image choice");
+
+      const img = document.createElement("img");
+      fillImageElement(img, label);
+      btn.appendChild(img);
+
       btn.addEventListener("click", () => onAnswer(label));
-      el.opts.appendChild(btn);
+      el.nameGrid.appendChild(btn);
     }
   }
 
   function lockButtons(disabled = true) {
     for (const b of el.opts.querySelectorAll("button")) b.disabled = disabled;
+    for (const b of el.nameGrid.querySelectorAll("button")) b.disabled = disabled;
   }
 
   function onAnswer(choice) {
@@ -654,26 +817,32 @@
       if (!r.ok) throw new Error("HTTP " + r.status);
       manifest = await r.json();
 
-      el.dot.classList.add("ok");
-      el.manifestLabel.textContent = "image_manifest.json: OK";
     } catch (e) {
       manifest = null;
-      el.dot.classList.add("bad");
-      el.manifestLabel.textContent = "image_manifest.json: FAILED (open via http://localhost/)";
       toast("manifest load failed");
     }
 
+    gameType = el.gameType.value === "name" ? "name" : "image";
     initSoundUrls();
     resetQuizState();
     renderQuestion();
   }
 
-  el.restart.addEventListener("click", () => {
+  function restartCurrentMode() {
     el.end.style.display = "none";
     el.main.style.display = "";
     initSoundUrls();
     resetQuizState();
     renderQuestion();
+  }
+
+  el.gameType.addEventListener("change", () => {
+    gameType = el.gameType.value === "name" ? "name" : "image";
+    restartCurrentMode();
+  });
+
+  el.restart.addEventListener("click", () => {
+    restartCurrentMode();
   });
 
   initSoundUrls();
